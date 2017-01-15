@@ -4083,12 +4083,18 @@ design rules under a new name.</description>
 <element name="C25" library="rcl" package="C0603" value="0.1uF" x="-271.653" y="-562.991"/>
 <element name="C28" library="rcl" package="C0603" value="0.1uF" x="-271.653" y="-566.42"/>
 <element name="C29" library="rcl" package="C0603" value="0.1uF" x="-271.653" y="-569.849"/>
+<element name="R26" library="rcl" package="R0603" value="20K" x="-271.653" y="-574.675"/>
+<element name="R27" library="rcl" package="R0603" value="20K" x="-271.653" y="-578.104"/>
+<element name="R28" library="rcl" package="R0603" value="10K" x="-271.653" y="-581.533"/>
+<element name="R29" library="rcl" package="R0603" value="10k" x="-271.653" y="-586.359"/>
 </elements>
 <signals>
 <signal name="N$1">
 <contactref element="U$1" pad="-"/>
 <contactref element="U$2" pad="+"/>
+<contactref element="R27" pad="2"/>
 <wire x1="-140.97" y1="2.81" x2="-151.13" y2="4.81" width="0" layer="19" extent="1-1"/>
+<wire x1="-270.803" y1="-578.104" x2="-151.13" y2="4.81" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND">
 <contactref element="U$3" pad="GND"/>
@@ -4166,7 +4172,9 @@ design rules under a new name.</description>
 <signal name="N$4">
 <contactref element="U$1" pad="+"/>
 <contactref element="S1" pad="3"/>
+<contactref element="R26" pad="1"/>
 <wire x1="-101.6" y1="3.81" x2="-140.97" y2="4.81" width="0" layer="19" extent="1-1"/>
+<wire x1="-272.503" y1="-574.675" x2="-140.97" y2="4.81" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="BATTERY">
 <contactref element="S1" pad="2"/>
@@ -4248,10 +4256,14 @@ design rules under a new name.</description>
 <contactref element="R3" pad="1"/>
 <contactref element="R4" pad="1"/>
 <contactref element="R12" pad="1"/>
+<contactref element="R28" pad="2"/>
+<contactref element="R29" pad="1"/>
 <wire x1="-156.425" y1="-75.311" x2="-156.425" y2="-96.393" width="0" layer="19" extent="1-1"/>
 <wire x1="-156.425" y1="-54.229" x2="-156.425" y2="-75.311" width="0" layer="19" extent="1-1"/>
 <wire x1="-106.26" y1="247.65" x2="-156.425" y2="-54.229" width="0" layer="19" extent="1-1"/>
 <wire x1="-265.176" y1="-462.788" x2="-156.425" y2="-96.393" width="0" layer="19" extent="1-1"/>
+<wire x1="-270.803" y1="-581.533" x2="-265.176" y2="-462.788" width="0" layer="19" extent="1-1"/>
+<wire x1="-272.503" y1="-586.359" x2="-270.803" y2="-581.533" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PC_10_EMIT_CIRCUIT_1">
 <contactref element="Q1" pad="G"/>
@@ -4641,9 +4653,17 @@ design rules under a new name.</description>
 </signal>
 <signal name="VOLTAGE_BATTERY_1">
 <contactref element="U$4" pad="16"/>
+<contactref element="R26" pad="2"/>
+<contactref element="R28" pad="1"/>
+<wire x1="-270.803" y1="-574.675" x2="-243.392" y2="-414.894" width="0" layer="19" extent="1-1"/>
+<wire x1="-272.503" y1="-581.533" x2="-270.803" y2="-574.675" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VOLTAGE_BATTERY_2">
 <contactref element="U$4" pad="17"/>
+<contactref element="R27" pad="1"/>
+<contactref element="R29" pad="2"/>
+<wire x1="-272.503" y1="-578.104" x2="-241.442" y2="-412.944" width="0" layer="19" extent="1-1"/>
+<wire x1="-270.803" y1="-586.359" x2="-272.503" y2="-578.104" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
