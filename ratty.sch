@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -12734,6 +12734,16 @@ Sourc: www.ctscorp.com</description>
 <pinref part="U$10" gate="G$1" pin="2"/>
 <wire x1="350.52" y1="172.72" x2="350.52" y2="175.26" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="L_VCC"/>
+<wire x1="325.12" y1="-5.08" x2="325.12" y2="-15.24" width="0.1524" layer="91"/>
+<label x="325.12" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="R_VCC"/>
+<wire x1="375.92" y1="-5.08" x2="375.92" y2="-15.24" width="0.1524" layer="91"/>
+<label x="375.92" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="N$4" class="0">
 <segment>
@@ -12826,12 +12836,22 @@ Sourc: www.ctscorp.com</description>
 <wire x1="246.38" y1="45.72" x2="256.54" y2="45.72" width="0.1524" layer="91"/>
 <label x="256.54" y="45.72" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="L_MOTOR_B"/>
+<wire x1="297.18" y1="-5.08" x2="297.18" y2="-20.32" width="0.1524" layer="91"/>
+<label x="297.18" y="-20.32" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="LEFT_BACK" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="OUT2"/>
 <wire x1="246.38" y1="40.64" x2="256.54" y2="40.64" width="0.1524" layer="91"/>
 <label x="256.54" y="40.64" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="L_MOTOR_A"/>
+<wire x1="289.56" y1="-5.08" x2="289.56" y2="-17.78" width="0.1524" layer="91"/>
+<label x="289.56" y="-17.78" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="RIGHT_BACK" class="0">
@@ -12840,12 +12860,22 @@ Sourc: www.ctscorp.com</description>
 <wire x1="246.38" y1="35.56" x2="256.54" y2="35.56" width="0.1524" layer="91"/>
 <label x="256.54" y="35.56" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="R_MOTOR_B"/>
+<wire x1="436.88" y1="-5.08" x2="436.88" y2="-17.78" width="0.1524" layer="91"/>
+<label x="436.88" y="-17.78" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="RIGHT_FORWARD" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="OUT4"/>
 <wire x1="246.38" y1="30.48" x2="256.54" y2="30.48" width="0.1524" layer="91"/>
 <label x="256.54" y="30.48" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="R_MOTOR_A"/>
+<wire x1="429.26" y1="-5.08" x2="429.26" y2="-17.78" width="0.1524" layer="91"/>
+<label x="429.26" y="-17.78" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -13046,11 +13076,21 @@ Sourc: www.ctscorp.com</description>
 <wire x1="203.2" y1="330.2" x2="213.36" y2="330.2" width="0.1524" layer="91"/>
 <label x="213.36" y="330.2" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="L_CHA"/>
+<wire x1="345.44" y1="-5.08" x2="345.44" y2="-15.24" width="0.1524" layer="91"/>
+<label x="345.44" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="PA_1_ENCODER1_2" class="0">
 <segment>
 <wire x1="203.2" y1="327.66" x2="213.36" y2="327.66" width="0.1524" layer="91"/>
 <label x="213.36" y="327.66" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="L_CHB"/>
+<wire x1="350.52" y1="-5.08" x2="350.52" y2="-15.24" width="0.1524" layer="91"/>
+<label x="350.52" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="PA_6_REC_CIRCUIT_2" class="0">
@@ -13517,6 +13557,16 @@ Sourc: www.ctscorp.com</description>
 <junction x="246.38" y="10.16"/>
 <label x="246.38" y="7.62" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="L_GND"/>
+<wire x1="330.2" y1="-5.08" x2="330.2" y2="-15.24" width="0.1524" layer="91"/>
+<label x="330.2" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="R_GND"/>
+<wire x1="381" y1="-5.08" x2="381" y2="-15.24" width="0.1524" layer="91"/>
+<label x="381" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -13631,6 +13681,11 @@ Sourc: www.ctscorp.com</description>
 <wire x1="203.2" y1="276.86" x2="213.36" y2="276.86" width="0.1524" layer="91"/>
 <label x="213.36" y="276.86" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="R_CHB"/>
+<wire x1="401.32" y1="-5.08" x2="401.32" y2="-15.24" width="0.1524" layer="91"/>
+<label x="401.32" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="PA_7_REC_CIRCUIT_1" class="0">
 <segment>
@@ -13653,6 +13708,11 @@ Sourc: www.ctscorp.com</description>
 <pinref part="U$4" gate="G$1" pin="PA5-TIM2_CH1/TIM2_ET/SPI1_SCK/I2S1_CK"/>
 <wire x1="203.2" y1="317.5" x2="208.28" y2="317.5" width="0.1524" layer="91"/>
 <label x="208.28" y="317.5" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="R_CHA"/>
+<wire x1="396.24" y1="-5.08" x2="396.24" y2="-15.24" width="0.1524" layer="91"/>
+<label x="396.24" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="PC8_REC_CIRCUIT_3" class="0">
