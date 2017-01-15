@@ -13803,6 +13803,20 @@ Sourc: www.ctscorp.com</description>
 <label x="388.62" y="335.28" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
+<net name="VOLTAGE_BATTERY_1" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="TIM2_CH3/TIM5_CH3/TIM9_CH1/I2S2_CKIN"/>
+<wire x1="203.2" y1="325.12" x2="213.36" y2="325.12" width="0.1524" layer="91"/>
+<label x="213.36" y="325.12" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="VOLTAGE_BATTERY_2" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA3-TIM2_CH4/TIM5_CH4/TIM9_CH2/I2S2_MCK"/>
+<wire x1="203.2" y1="322.58" x2="213.36" y2="322.58" width="0.1524" layer="91"/>
+<label x="213.36" y="322.58" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
