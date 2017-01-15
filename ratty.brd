@@ -1612,6 +1612,22 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
 </package>
+<package name="R1206">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
+<wire x1="0.9525" y1="0.8128" x2="-0.9652" y2="0.8128" width="0.1524" layer="51"/>
+<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="2" x="1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<smd name="1" x="-1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.6891" y1="-0.8763" x2="-0.9525" y2="0.8763" layer="51"/>
+<rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
+<rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
+</package>
 </packages>
 </library>
 <library name="SparkFun-Sensors">
@@ -3683,6 +3699,25 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 </package>
 </packages>
 </library>
+<library name="LEDs">
+<packages>
+<package name="LED-TRICOLOR-SMD">
+<wire x1="-1.3" y1="1.3" x2="-1.6" y2="1.3" width="0.2032" layer="21"/>
+<wire x1="-1.6" y1="1.3" x2="-1.6" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="-1.6" y1="-1.3" x2="-1.3" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="1.3" y1="1.3" x2="1.6" y2="1.3" width="0.2032" layer="21"/>
+<wire x1="1.6" y1="1.3" x2="1.6" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="1.6" y1="-1.3" x2="1.3" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="0" y1="-1.6" x2="0" y2="-1.8" width="0.2032" layer="21"/>
+<smd name="G" x="-0.7" y="1.5" dx="0.7" dy="1.2" layer="1"/>
+<smd name="B" x="0.7" y="1.5" dx="0.7" dy="1.2" layer="1"/>
+<smd name="R" x="-0.7" y="-1.5" dx="0.7" dy="1.2" layer="1"/>
+<smd name="A" x="0.7" y="-1.5" dx="0.7" dy="1.2" layer="1"/>
+<text x="-1.016" y="0.127" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.016" y="-0.635" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3893,25 +3928,25 @@ design rules under a new name.</description>
 <element name="U$11" library="sfh4550 &amp; teft4300" package="RECEIVER" value="RECEIVER" x="-149.225" y="-85.344"/>
 <element name="R4" library="resistor" package="R0603" value="1.8K" x="-155.575" y="-96.393"/>
 <element name="U$15" library="sfh4550 &amp; teft4300" package="EMITTER" value="EMITTER" x="-137.033" y="-342.646"/>
-<element name="R5" library="resistor" package="R0603" value="43" x="23.749" y="-108.839"/>
+<element name="R5" library="rcl" package="R1206" value="43" x="23.749" y="-108.839"/>
 <element name="R6" library="resistor" package="R0603" value="47K" x="50.165" y="-108.839"/>
 <element name="Q1" library="transistor-small-signal" package="SOT54E" value="BS170" x="-6.985" y="-377.952"/>
 <element name="C6" library="rcl" package="C0603" value="0.1uF" x="12.319" y="-360.045"/>
 <element name="C7" library="rcl" package="C0603" value="4.7uF" x="36.195" y="-360.045"/>
 <element name="U$16" library="sfh4550 &amp; teft4300" package="EMITTER" value="EMITTER" x="-94.869" y="-342.646"/>
-<element name="R7" library="resistor" package="R0603" value="43" x="-144.907" y="-360.045"/>
+<element name="R7" library="rcl" package="R1206" value="43" x="-144.907" y="-360.045"/>
 <element name="R10" library="resistor" package="R0603" value="47K" x="-118.491" y="-360.045"/>
 <element name="Q2" library="transistor-small-signal" package="SOT54E" value="BS170" x="9.652" y="-377.952"/>
 <element name="C8" library="rcl" package="C0603" value="0.1uF" x="-146.177" y="-378.841"/>
 <element name="C9" library="rcl" package="C0603" value="4.7uF" x="-122.301" y="-378.841"/>
 <element name="U$18" library="sfh4550 &amp; teft4300" package="EMITTER" value="EMITTER" x="-52.705" y="-342.646"/>
-<element name="R11" library="resistor" package="R0603" value="43" x="-92.075" y="-360.045"/>
+<element name="R11" library="rcl" package="R1206" value="43" x="-92.075" y="-360.045"/>
 <element name="R13" library="resistor" package="R0603" value="47K" x="-65.659" y="-360.045"/>
 <element name="Q3" library="transistor-small-signal" package="SOT54E" value="BS170" x="26.289" y="-377.952"/>
 <element name="C12" library="rcl" package="C0603" value="0.1uF" x="-98.425" y="-378.841"/>
 <element name="C13" library="rcl" package="C0603" value="4.7uF" x="-74.549" y="-378.841"/>
 <element name="U$19" library="sfh4550 &amp; teft4300" package="EMITTER" value="EMITTER" x="-10.541" y="-342.646"/>
-<element name="R14" library="resistor" package="R0603" value="43" x="-39.243" y="-360.045"/>
+<element name="R14" library="rcl" package="R1206" value="43" x="-39.243" y="-360.045"/>
 <element name="R15" library="resistor" package="R0603" value="47K" x="-12.827" y="-360.045"/>
 <element name="Q5" library="transistor-small-signal" package="SOT54E" value="BS170" x="42.926" y="-377.952"/>
 <element name="C14" library="rcl" package="C0603" value="0.1uF" x="-50.673" y="-378.841"/>
@@ -3948,6 +3983,10 @@ design rules under a new name.</description>
 <element name="JP1" library="pinhead" package="1X05" value="" x="-261.874" y="-479.298"/>
 <element name="C26" library="rcl" package="C0603" value="4.7uF" x="-267.335" y="-487.172"/>
 <element name="U$14" library="splitter" package="SPLITTER" value="SPLITTER" x="-268.732" y="-489.712"/>
+<element name="U$17" library="LEDs" package="LED-TRICOLOR-SMD" value="LED-TRICOLOR" x="-271.526" y="-488.442"/>
+<element name="R9" library="rcl" package="R0603" value="120" x="-271.653" y="-493.141"/>
+<element name="R16" library="rcl" package="R0603" value="120" x="-271.653" y="-496.57"/>
+<element name="R17" library="rcl" package="R0603" value="120" x="-271.653" y="-499.999"/>
 </elements>
 <signals>
 <signal name="N$1">
@@ -4110,21 +4149,6 @@ design rules under a new name.</description>
 <wire x1="-106.26" y1="247.65" x2="-156.425" y2="-54.229" width="0" layer="19" extent="1-1"/>
 <wire x1="-265.176" y1="-462.788" x2="-156.425" y2="-96.393" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="PC_1_REC_CIRCUIT_4">
-<contactref element="U$13" pad="E"/>
-<contactref element="R12" pad="2"/>
-<wire x1="-104.56" y1="247.65" x2="-17.78" y2="249.69" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="PA_5_REC_CIRCUIT_1">
-<contactref element="U$6" pad="E"/>
-<contactref element="R1" pad="2"/>
-<wire x1="-150.495" y1="-43.68" x2="-154.725" y2="-54.229" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="PC_0_REC_CIRCUIT_3">
-<contactref element="U$11" pad="E"/>
-<contactref element="R4" pad="2"/>
-<wire x1="-150.495" y1="-85.844" x2="-154.725" y2="-96.393" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="PC_10_EMIT_CIRCUIT_1">
 <contactref element="Q1" pad="G"/>
 <contactref element="R6" pad="2"/>
@@ -4138,42 +4162,42 @@ design rules under a new name.</description>
 <signal name="N$6">
 <contactref element="U$15" pad="-"/>
 <contactref element="R5" pad="2"/>
-<wire x1="24.599" y1="-108.839" x2="-135.763" y2="-343.146" width="0" layer="19" extent="1-1"/>
+<wire x1="25.171" y1="-108.839" x2="-135.763" y2="-343.146" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="R5" pad="1"/>
 <contactref element="Q1" pad="D"/>
-<wire x1="22.899" y1="-108.839" x2="-8.255" y2="-377.952" width="0" layer="19" extent="1-1"/>
+<wire x1="22.327" y1="-108.839" x2="-8.255" y2="-377.952" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <contactref element="U$16" pad="-"/>
 <contactref element="R7" pad="2"/>
-<wire x1="-93.599" y1="-343.146" x2="-144.057" y2="-360.045" width="0" layer="19" extent="1-1"/>
+<wire x1="-93.599" y1="-343.146" x2="-143.485" y2="-360.045" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
 <contactref element="R7" pad="1"/>
 <contactref element="Q2" pad="D"/>
-<wire x1="8.382" y1="-377.952" x2="-145.757" y2="-360.045" width="0" layer="19" extent="1-1"/>
+<wire x1="8.382" y1="-377.952" x2="-146.329" y2="-360.045" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$11">
 <contactref element="U$18" pad="-"/>
 <contactref element="R11" pad="2"/>
-<wire x1="-51.435" y1="-343.146" x2="-91.225" y2="-360.045" width="0" layer="19" extent="1-1"/>
+<wire x1="-51.435" y1="-343.146" x2="-90.653" y2="-360.045" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$12">
 <contactref element="R11" pad="1"/>
 <contactref element="Q3" pad="D"/>
-<wire x1="25.019" y1="-377.952" x2="-92.925" y2="-360.045" width="0" layer="19" extent="1-1"/>
+<wire x1="25.019" y1="-377.952" x2="-93.497" y2="-360.045" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
 <contactref element="U$19" pad="-"/>
 <contactref element="R14" pad="2"/>
-<wire x1="-9.271" y1="-343.146" x2="-38.393" y2="-360.045" width="0" layer="19" extent="1-1"/>
+<wire x1="-9.271" y1="-343.146" x2="-37.821" y2="-360.045" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$15">
 <contactref element="R14" pad="1"/>
 <contactref element="Q5" pad="D"/>
-<wire x1="41.656" y1="-377.952" x2="-40.093" y2="-360.045" width="0" layer="19" extent="1-1"/>
+<wire x1="41.656" y1="-377.952" x2="-40.665" y2="-360.045" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PA_6_REC_CIRCUIT_2">
 <contactref element="U$9" pad="E"/>
@@ -4305,6 +4329,8 @@ design rules under a new name.</description>
 <contactref element="C18" pad="1"/>
 <contactref element="C19" pad="1"/>
 <contactref element="U$14" pad="1"/>
+<contactref element="U$17" pad="A"/>
+<wire x1="-268.732" y1="-489.712" x2="-270.826" y2="-489.942" width="0" layer="19" extent="1-1"/>
 <wire x1="-261.874" y1="-479.298" x2="-268.732" y2="-489.712" width="0" layer="19" extent="1-1"/>
 <wire x1="-265.518" y1="-466.217" x2="-261.874" y2="-479.298" width="0" layer="19" extent="1-1"/>
 <wire x1="-261.151" y1="-457.962" x2="-265.518" y2="-466.217" width="0" layer="19" extent="1-1"/>
@@ -4379,6 +4405,63 @@ design rules under a new name.</description>
 <contactref element="C26" pad="2"/>
 <contactref element="U$14" pad="2"/>
 <wire x1="-266.485" y1="-487.172" x2="-268.732" y2="-489.712" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$18">
+<contactref element="U$17" pad="R"/>
+<contactref element="R9" pad="2"/>
+<wire x1="-270.803" y1="-493.141" x2="-272.226" y2="-489.942" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$19">
+<contactref element="U$17" pad="B"/>
+<contactref element="R16" pad="2"/>
+<wire x1="-270.803" y1="-496.57" x2="-270.826" y2="-486.942" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$20">
+<contactref element="U$17" pad="G"/>
+<contactref element="R17" pad="2"/>
+<wire x1="-270.803" y1="-499.999" x2="-272.226" y2="-486.942" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="PB3_ENCODER2_2">
+<contactref element="U$4" pad="55"/>
+</signal>
+<signal name="PA_7_REC_CIRCUIT_1">
+<contactref element="U$4" pad="23"/>
+<contactref element="U$6" pad="E"/>
+<contactref element="R1" pad="2"/>
+<wire x1="-150.495" y1="-43.68" x2="-154.725" y2="-54.229" width="0" layer="19" extent="1-1"/>
+<wire x1="-241.442" y1="-409.944" x2="-154.725" y2="-54.229" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="PA_5_ENCODER2_1">
+<contactref element="U$4" pad="21"/>
+</signal>
+<signal name="PC8_REC_CIRCUIT_3">
+<contactref element="U$4" pad="39"/>
+<contactref element="U$11" pad="E"/>
+<contactref element="R4" pad="2"/>
+<wire x1="-150.495" y1="-85.844" x2="-154.725" y2="-96.393" width="0" layer="19" extent="1-1"/>
+<wire x1="-246.392" y1="-403.494" x2="-154.725" y2="-96.393" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="PC9_REC_CIRCUIT_4">
+<contactref element="U$4" pad="40"/>
+<contactref element="U$13" pad="E"/>
+<contactref element="R12" pad="2"/>
+<wire x1="-104.56" y1="247.65" x2="-17.78" y2="249.69" width="0" layer="19" extent="1-1"/>
+<wire x1="-246.892" y1="-403.494" x2="-104.56" y2="247.65" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="RED_LED">
+<contactref element="U$4" pad="8"/>
+<contactref element="R9" pad="1"/>
+<wire x1="-272.503" y1="-493.141" x2="-247.392" y2="-414.894" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="BLUE_LED">
+<contactref element="U$4" pad="9"/>
+<contactref element="R16" pad="1"/>
+<wire x1="-272.503" y1="-496.57" x2="-246.892" y2="-414.894" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="GREEN_LED">
+<contactref element="U$4" pad="10"/>
+<contactref element="R17" pad="1"/>
+<wire x1="-272.503" y1="-499.999" x2="-246.392" y2="-414.894" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

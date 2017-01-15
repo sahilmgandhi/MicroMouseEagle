@@ -11979,6 +11979,69 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="LEDs">
+<packages>
+<package name="LED-TRICOLOR-SMD">
+<wire x1="-1.3" y1="1.3" x2="-1.6" y2="1.3" width="0.2032" layer="21"/>
+<wire x1="-1.6" y1="1.3" x2="-1.6" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="-1.6" y1="-1.3" x2="-1.3" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="1.3" y1="1.3" x2="1.6" y2="1.3" width="0.2032" layer="21"/>
+<wire x1="1.6" y1="1.3" x2="1.6" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="1.6" y1="-1.3" x2="1.3" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="0" y1="-1.6" x2="0" y2="-1.8" width="0.2032" layer="21"/>
+<smd name="G" x="-0.7" y="1.5" dx="0.7" dy="1.2" layer="1"/>
+<smd name="B" x="0.7" y="1.5" dx="0.7" dy="1.2" layer="1"/>
+<smd name="R" x="-0.7" y="-1.5" dx="0.7" dy="1.2" layer="1"/>
+<smd name="A" x="0.7" y="-1.5" dx="0.7" dy="1.2" layer="1"/>
+<text x="-1.016" y="0.127" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.016" y="-0.635" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LED-TRICOLORSMD">
+<wire x1="10.16" y1="2.54" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="10.16" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.81" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-1.27" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="2.54" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-3.81" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="3.81" y2="-2.54" width="0.254" layer="94"/>
+<text x="-7.62" y="3.302" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-10.16" size="1.778" layer="95">&gt;VALUE</text>
+<pin name="GRN" x="-10.16" y="-5.08" visible="pin" length="short"/>
+<pin name="BLU" x="-10.16" y="-2.54" visible="pin" length="short"/>
+<pin name="A" x="12.7" y="-2.54" visible="pin" length="short" rot="R180"/>
+<pin name="RED" x="-10.16" y="0" visible="pin" length="short"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LED-TRICOLOR">
+<description>&lt;b&gt;Tri-Color LED SMD&lt;/b&gt;
+Proven layout and schematic for triple color LED in SMD package - common anode. Spark Fun Electronics SKU : COM-07844</description>
+<gates>
+<gate name="G$1" symbol="LED-TRICOLORSMD" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="LED-TRICOLOR-SMD">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="BLU" pad="B"/>
+<connect gate="G$1" pin="GRN" pad="G"/>
+<connect gate="G$1" pin="RED" pad="R"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -12010,25 +12073,25 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="U$11" library="sfh4550 &amp; teft4300" deviceset="RECEIVER" device=""/>
 <part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="1.8K"/>
 <part name="U$15" library="sfh4550 &amp; teft4300" deviceset="EMITTER" device=""/>
-<part name="R5" library="resistor" deviceset="R-US_" device="R0603" value="43"/>
+<part name="R5" library="rcl" deviceset="R-US_" device="R1206" value="43"/>
 <part name="R6" library="resistor" deviceset="R-US_" device="R0603" value="47K"/>
 <part name="Q1" library="transistor-small-signal" deviceset="BS170" device=""/>
 <part name="C6" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="U$16" library="sfh4550 &amp; teft4300" deviceset="EMITTER" device=""/>
-<part name="R7" library="resistor" deviceset="R-US_" device="R0603" value="43"/>
+<part name="R7" library="rcl" deviceset="R-US_" device="R1206" value="43"/>
 <part name="R10" library="resistor" deviceset="R-US_" device="R0603" value="47K"/>
 <part name="Q2" library="transistor-small-signal" deviceset="BS170" device=""/>
 <part name="C8" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C9" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="U$18" library="sfh4550 &amp; teft4300" deviceset="EMITTER" device=""/>
-<part name="R11" library="resistor" deviceset="R-US_" device="R0603" value="43"/>
+<part name="R11" library="rcl" deviceset="R-US_" device="R1206" value="43"/>
 <part name="R13" library="resistor" deviceset="R-US_" device="R0603" value="47K"/>
 <part name="Q3" library="transistor-small-signal" deviceset="BS170" device=""/>
 <part name="C12" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C13" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="U$19" library="sfh4550 &amp; teft4300" deviceset="EMITTER" device=""/>
-<part name="R14" library="resistor" deviceset="R-US_" device="R0603" value="43"/>
+<part name="R14" library="rcl" deviceset="R-US_" device="R1206" value="43"/>
 <part name="R15" library="resistor" deviceset="R-US_" device="R0603" value="47K"/>
 <part name="Q5" library="transistor-small-signal" deviceset="BS170" device=""/>
 <part name="C14" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
@@ -12084,6 +12147,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X5" device=""/>
 <part name="C26" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="U$14" library="splitter" deviceset="SPLITTER" device=""/>
+<part name="U$17" library="LEDs" deviceset="LED-TRICOLOR" device=""/>
+<part name="GND15" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="R9" library="rcl" deviceset="R-US_" device="R0603" value="120"/>
+<part name="R16" library="rcl" deviceset="R-US_" device="R0603" value="120"/>
+<part name="R17" library="rcl" deviceset="R-US_" device="R0603" value="120"/>
 </parts>
 <sheets>
 <sheet>
@@ -12192,6 +12260,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="JP1" gate="A" x="259.08" y="299.72"/>
 <instance part="C26" gate="G$1" x="213.36" y="223.52" rot="R90"/>
 <instance part="U$14" gate="G$1" x="55.88" y="220.98" rot="R270"/>
+<instance part="U$17" gate="G$1" x="144.78" y="193.04"/>
+<instance part="GND15" gate="G$1" x="177.8" y="190.5" rot="R90"/>
+<instance part="R9" gate="G$1" x="114.3" y="193.04"/>
+<instance part="R16" gate="G$1" x="114.3" y="190.5"/>
+<instance part="R17" gate="G$1" x="114.3" y="187.96"/>
 </instances>
 <busses>
 </busses>
@@ -12559,51 +12632,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="AGND6" gate="VR1" pin="AGND"/>
 </segment>
 </net>
-<net name="PC_1_REC_CIRCUIT_4" class="0">
-<segment>
-<pinref part="U$13" gate="G$1" pin="E"/>
-<pinref part="R12" gate="G$1" pin="2"/>
-<wire x1="599.44" y1="139.7" x2="599.44" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="599.44" y1="134.62" x2="599.44" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="599.44" y1="134.62" x2="586.74" y2="134.62" width="0.1524" layer="91"/>
-<junction x="599.44" y="134.62"/>
-<label x="586.74" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<wire x1="60.96" y1="269.24" x2="53.34" y2="269.24" width="0.1524" layer="91"/>
-<label x="53.34" y="269.24" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="PA_5_REC_CIRCUIT_1" class="0">
-<segment>
-<pinref part="U$6" gate="G$1" pin="E"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="457.2" y1="139.7" x2="457.2" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="457.2" y1="134.62" x2="457.2" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="457.2" y1="134.62" x2="444.5" y2="134.62" width="0.1524" layer="91"/>
-<junction x="457.2" y="134.62"/>
-<label x="444.5" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<wire x1="203.2" y1="317.5" x2="213.36" y2="317.5" width="0.1524" layer="91"/>
-<label x="213.36" y="317.5" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="PC_0_REC_CIRCUIT_3" class="0">
-<segment>
-<pinref part="U$11" gate="G$1" pin="E"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="553.72" y1="139.7" x2="553.72" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="553.72" y1="134.62" x2="553.72" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="553.72" y1="134.62" x2="541.02" y2="134.62" width="0.1524" layer="91"/>
-<junction x="553.72" y="134.62"/>
-<label x="541.02" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<wire x1="60.96" y1="271.78" x2="53.34" y2="271.78" width="0.1524" layer="91"/>
-<label x="53.34" y="271.78" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="PC_10_EMIT_CIRCUIT_1" class="0">
 <segment>
 <pinref part="Q1" gate="1" pin="G"/>
@@ -12700,18 +12728,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <segment>
 <wire x1="203.2" y1="327.66" x2="213.36" y2="327.66" width="0.1524" layer="91"/>
 <label x="213.36" y="327.66" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="PA_2_ENCODER2_1" class="0">
-<segment>
-<wire x1="203.2" y1="325.12" x2="213.36" y2="325.12" width="0.1524" layer="91"/>
-<label x="213.36" y="325.12" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="PA_3_ENCODER2_2" class="0">
-<segment>
-<wire x1="203.2" y1="322.58" x2="213.36" y2="322.58" width="0.1524" layer="91"/>
-<label x="213.36" y="322.58" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="PA_6_REC_CIRCUIT_2" class="0">
@@ -13098,6 +13114,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <junction x="-20.32" y="233.68"/>
 <label x="-20.32" y="236.22" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$17" gate="G$1" pin="A"/>
+<wire x1="157.48" y1="190.5" x2="175.26" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="GND15" gate="G$1" pin="GND"/>
+</segment>
 </net>
 <net name="MGND" class="0">
 <segment>
@@ -13218,6 +13239,125 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="U$14" gate="G$1" pin="2"/>
 <wire x1="55.88" y1="215.9" x2="55.88" y2="210.82" width="0.1524" layer="91"/>
 <label x="55.88" y="210.82" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="U$17" gate="G$1" pin="RED"/>
+<wire x1="134.62" y1="193.04" x2="119.38" y2="193.04" width="0.1524" layer="91"/>
+<pinref part="R9" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="U$17" gate="G$1" pin="BLU"/>
+<wire x1="134.62" y1="190.5" x2="119.38" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="R16" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="U$17" gate="G$1" pin="GRN"/>
+<wire x1="134.62" y1="187.96" x2="119.38" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="PB3_ENCODER2_2" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PB3-JTDO-SWO/TIME2_CH2/SPI1_SCK/SPI3_SCK/USART1_RX/I2C2_SDA"/>
+<wire x1="203.2" y1="276.86" x2="213.36" y2="276.86" width="0.1524" layer="91"/>
+<label x="213.36" y="276.86" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="PA_7_REC_CIRCUIT_1" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA7-TIM1_CH1N/TIM3_CH2"/>
+<wire x1="203.2" y1="312.42" x2="213.36" y2="312.42" width="0.1524" layer="91"/>
+<label x="213.36" y="312.42" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="E"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="457.2" y1="139.7" x2="457.2" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="457.2" y1="134.62" x2="457.2" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="457.2" y1="134.62" x2="444.5" y2="134.62" width="0.1524" layer="91"/>
+<junction x="457.2" y="134.62"/>
+<label x="444.5" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="PA_5_ENCODER2_1" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA5-TIM2_CH1/TIM2_ET/SPI1_SCK/I2S1_CK"/>
+<wire x1="203.2" y1="317.5" x2="208.28" y2="317.5" width="0.1524" layer="91"/>
+<label x="208.28" y="317.5" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="PC8_REC_CIRCUIT_3" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PC8-TIM3_CH3/USART6_CK/SDIO_D0"/>
+<wire x1="60.96" y1="251.46" x2="55.88" y2="251.46" width="0.1524" layer="91"/>
+<label x="58.42" y="251.46" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="E"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="553.72" y1="139.7" x2="553.72" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="553.72" y1="134.62" x2="553.72" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="553.72" y1="134.62" x2="541.02" y2="134.62" width="0.1524" layer="91"/>
+<junction x="553.72" y="134.62"/>
+<label x="541.02" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="PC9_REC_CIRCUIT_4" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PC9-MCO_2/TIM3)CH4/I2C3_SDA/SDIO_D1"/>
+<wire x1="60.96" y1="248.92" x2="55.88" y2="248.92" width="0.1524" layer="91"/>
+<label x="58.42" y="248.92" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$13" gate="G$1" pin="E"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="599.44" y1="139.7" x2="599.44" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="599.44" y1="134.62" x2="599.44" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="599.44" y1="134.62" x2="586.74" y2="134.62" width="0.1524" layer="91"/>
+<junction x="599.44" y="134.62"/>
+<label x="586.74" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="RED_LED" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PC0-EVENTOUT"/>
+<wire x1="60.96" y1="271.78" x2="55.88" y2="271.78" width="0.1524" layer="91"/>
+<label x="55.88" y="271.78" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="193.04" x2="101.6" y2="193.04" width="0.1524" layer="91"/>
+<label x="101.6" y="193.04" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="BLUE_LED" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PC1-EVENTOUT"/>
+<wire x1="60.96" y1="269.24" x2="55.88" y2="269.24" width="0.1524" layer="91"/>
+<label x="55.88" y="269.24" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R16" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="190.5" x2="104.14" y2="190.5" width="0.1524" layer="91"/>
+<label x="104.14" y="190.5" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="GREEN_LED" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PC2-SPI2_MISO+EVENTOUT"/>
+<wire x1="60.96" y1="266.7" x2="55.88" y2="266.7" width="0.1524" layer="91"/>
+<label x="55.88" y="266.7" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="187.96" x2="106.68" y2="187.96" width="0.1524" layer="91"/>
+<label x="106.68" y="187.96" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
