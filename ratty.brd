@@ -2530,6 +2530,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
+<library name="splitter">
+<packages>
+<package name="SPLITTER">
+<smd name="1" x="0" y="0" dx="0.1016" dy="0.1016" layer="1" roundness="100" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="0" y="0" dx="0.1016" dy="0.1016" layer="1" roundness="100" rot="R90" stop="no" thermals="no" cream="no"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2781,6 +2789,11 @@ design rules under a new name.</description>
 <element name="C19" library="rcl" package="C0603" value="100nF" x="-252.222" y="-435.356"/>
 <element name="R2" library="rcl" package="R1206" value="10K" x="-251.206" y="-440.817"/>
 <element name="RESETBUTTON" library="switch-tact" package="DTSM-6" value="DTSM-6" x="-258.699" y="-438.277"/>
+<element name="C20" library="rcl" package="C0603" value="10nF" x="-262.001" y="-446.278"/>
+<element name="C21" library="rcl" package="C0603" value="0.1uF" x="-262.001" y="-449.707"/>
+<element name="C22" library="rcl" package="C0603" value="0.1uF" x="-262.001" y="-453.136"/>
+<element name="C23" library="rcl" package="C0603" value="2.2nF" x="-262.001" y="-457.962"/>
+<element name="U$17" library="splitter" package="SPLITTER" value="SPLITTER" x="-263.398" y="-460.502"/>
 </elements>
 <signals>
 <signal name="N$1">
@@ -2822,6 +2835,12 @@ design rules under a new name.</description>
 <contactref element="IC2" pad="16"/>
 <contactref element="IC2" pad="17"/>
 <contactref element="RESETBUTTON" pad="3"/>
+<contactref element="U1" pad="18"/>
+<contactref element="U1" pad="11"/>
+<contactref element="C21" pad="2"/>
+<contactref element="C22" pad="2"/>
+<contactref element="C20" pad="2"/>
+<contactref element="C23" pad="2"/>
 <wire x1="-119.913" y1="-360.045" x2="-121.451" y2="-378.841" width="0" layer="19" extent="1-1"/>
 <wire x1="-97.575" y1="-378.841" x2="-121.451" y2="-378.841" width="0" layer="19" extent="1-1"/>
 <wire x1="-73.699" y1="-378.841" x2="-97.575" y2="-378.841" width="0" layer="19" extent="1-1"/>
@@ -2836,15 +2855,21 @@ design rules under a new name.</description>
 <wire x1="37.045" y1="-360.045" x2="44.196" y2="-377.952" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.249" y1="-360.045" x2="-5.715" y2="-377.952" width="0" layer="19" extent="1-1"/>
 <wire x1="-145.327" y1="-378.841" x2="-121.451" y2="-378.841" width="0" layer="19" extent="1-1"/>
-<wire x1="-245.364" y1="-390.37" x2="-145.327" y2="-378.841" width="0" layer="19" extent="1-1"/>
-<wire x1="-246.634" y1="-390.37" x2="-245.364" y2="-390.37" width="0" layer="19" extent="1-1"/>
-<wire x1="-247.904" y1="-390.37" x2="-246.634" y2="-390.37" width="0" layer="19" extent="1-1"/>
-<wire x1="-249.174" y1="-390.37" x2="-247.904" y2="-390.37" width="0" layer="19" extent="1-1"/>
-<wire x1="-249.174" y1="-399.57" x2="-249.174" y2="-390.37" width="0" layer="19" extent="1-1"/>
-<wire x1="-247.904" y1="-399.57" x2="-249.174" y2="-399.57" width="0" layer="19" extent="1-1"/>
-<wire x1="-246.634" y1="-399.57" x2="-247.904" y2="-399.57" width="0" layer="19" extent="1-1"/>
-<wire x1="-245.364" y1="-399.57" x2="-246.634" y2="-399.57" width="0" layer="19" extent="1-1"/>
+<wire x1="-235.0328" y1="-396.9712" x2="-145.327" y2="-378.841" width="0" layer="19" extent="1-1"/>
+<wire x1="-236.3336" y1="-400.3482" x2="-235.0328" y2="-396.9712" width="0" layer="19" extent="1-1"/>
+<wire x1="-245.364" y1="-399.57" x2="-236.3336" y2="-400.3482" width="0" layer="19" extent="1-1"/>
+<wire x1="-246.634" y1="-399.57" x2="-245.364" y2="-399.57" width="0" layer="19" extent="1-1"/>
+<wire x1="-247.904" y1="-399.57" x2="-246.634" y2="-399.57" width="0" layer="19" extent="1-1"/>
+<wire x1="-249.174" y1="-399.57" x2="-247.904" y2="-399.57" width="0" layer="19" extent="1-1"/>
+<wire x1="-249.174" y1="-390.37" x2="-249.174" y2="-399.57" width="0" layer="19" extent="1-1"/>
+<wire x1="-247.904" y1="-390.37" x2="-249.174" y2="-390.37" width="0" layer="19" extent="1-1"/>
+<wire x1="-246.634" y1="-390.37" x2="-247.904" y2="-390.37" width="0" layer="19" extent="1-1"/>
+<wire x1="-245.364" y1="-390.37" x2="-246.634" y2="-390.37" width="0" layer="19" extent="1-1"/>
 <wire x1="-262.674" y1="-440.527" x2="-249.174" y2="-399.57" width="0" layer="19" extent="1-1"/>
+<wire x1="-261.151" y1="-446.278" x2="-262.674" y2="-440.527" width="0" layer="19" extent="1-1"/>
+<wire x1="-261.151" y1="-449.707" x2="-261.151" y2="-446.278" width="0" layer="19" extent="1-1"/>
+<wire x1="-261.151" y1="-453.136" x2="-261.151" y2="-449.707" width="0" layer="19" extent="1-1"/>
+<wire x1="-261.151" y1="-457.962" x2="-261.151" y2="-453.136" width="0" layer="19" extent="1-1"/>
 <wire x1="48.743" y1="-108.839" x2="37.045" y2="-360.045" width="0" layer="19" extent="1-1"/>
 <wire x1="-133.985" y1="3.65" x2="48.743" y2="-108.839" width="0" layer="19" extent="1-1"/>
 <wire x1="-135.255" y1="3.65" x2="-133.985" y2="3.65" width="0" layer="19" extent="1-1"/>
@@ -3089,6 +3114,28 @@ design rules under a new name.</description>
 <contactref element="RESETBUTTON" pad="1"/>
 <wire x1="-252.628" y1="-440.817" x2="-262.674" y2="-436.027" width="0" layer="19" extent="1-1"/>
 <wire x1="-247.892" y1="-414.894" x2="-262.674" y2="-436.027" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="GYROVDD">
+<contactref element="U1" pad="13"/>
+<contactref element="C22" pad="1"/>
+<wire x1="-235.0328" y1="-399.5728" x2="-262.851" y2="-453.136" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="GRYOVLOGIC">
+<contactref element="U1" pad="8"/>
+</signal>
+<signal name="GRYOREGOUT">
+<contactref element="U1" pad="10"/>
+</signal>
+<signal name="GYROVLOGIC">
+<contactref element="C20" pad="1"/>
+</signal>
+<signal name="GYROREGOUT">
+<contactref element="C21" pad="1"/>
+</signal>
+<signal name="GYROCPOUT">
+<contactref element="U1" pad="20"/>
+<contactref element="C23" pad="1"/>
+<wire x1="-236.3336" y1="-396.1958" x2="-262.851" y2="-457.962" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
