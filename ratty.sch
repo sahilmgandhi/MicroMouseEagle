@@ -11998,7 +11998,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0603" value="10 uF"/>
 <part name="U$5" library="TPS73633(SOT-23)" deviceset="TPS73633(SOT-23)" device=""/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
-<part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="0.1 uF"/>
+<part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="10 uF"/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="10 nF"/>
 <part name="U$13" library="sfh4550 &amp; teft4300" deviceset="RECEIVER" device=""/>
@@ -12037,12 +12037,12 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="U1" library="SparkFun-Sensors" deviceset="ITG-3200" device="1:1"/>
 <part name="IC2" library="st-microelectronics" deviceset="L293DD" device=""/>
 <part name="U$4" library="stm32f411" deviceset="STM32F411XC" device=""/>
-<part name="C10" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C11" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C16" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C17" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C18" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C19" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C10" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
+<part name="C11" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
+<part name="C16" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
+<part name="C17" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
+<part name="C18" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
+<part name="C19" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="10K"/>
 <part name="RESETBUTTON" library="switch-tact" deviceset="DTSM-6" device=""/>
 <part name="C20" library="rcl" deviceset="C-EU" device="C0603" value="10nF"/>
@@ -12057,7 +12057,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="AGND1" library="supply1" deviceset="AGND" device=""/>
 <part name="GND18" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="C24" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C24" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="AGND2" library="supply1" deviceset="AGND" device=""/>
 <part name="GND19" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="GND20" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
