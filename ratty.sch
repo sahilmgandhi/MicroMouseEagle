@@ -12523,9 +12523,18 @@ Sourc: www.ctscorp.com</description>
 <instance part="SPLIT_VSS_CAP" gate="G$1" x="55.88" y="220.98" rot="R270"/>
 <instance part="U$17" gate="G$1" x="144.78" y="193.04"/>
 <instance part="GND15" gate="G$1" x="177.8" y="190.5" rot="R90"/>
-<instance part="R9" gate="G$1" x="114.3" y="193.04"/>
-<instance part="R16" gate="G$1" x="114.3" y="190.5"/>
-<instance part="R17" gate="G$1" x="114.3" y="187.96"/>
+<instance part="R9" gate="G$1" x="114.3" y="193.04" smashed="yes">
+<attribute name="NAME" x="113.03" y="197.0786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="120.65" y="192.278" size="1.778" layer="96"/>
+</instance>
+<instance part="R16" gate="G$1" x="114.3" y="190.5" smashed="yes">
+<attribute name="NAME" x="110.2614" y="189.23" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="120.65" y="189.738" size="1.778" layer="96"/>
+</instance>
+<instance part="R17" gate="G$1" x="114.3" y="187.96" smashed="yes">
+<attribute name="NAME" x="113.03" y="181.8386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="120.65" y="187.198" size="1.778" layer="96"/>
+</instance>
 <instance part="S2" gate="G$1" x="406.4" y="312.42" rot="R180"/>
 <instance part="R20" gate="G$1" x="408.94" y="335.28"/>
 <instance part="R21" gate="G$1" x="429.26" y="335.28"/>
@@ -12554,7 +12563,7 @@ Sourc: www.ctscorp.com</description>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="BATTERY_2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="-"/>
 <wire x1="58.42" y1="104.14" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
@@ -12733,7 +12742,7 @@ Sourc: www.ctscorp.com</description>
 <label x="375.92" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="BATTERY_1" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="+"/>
 <pinref part="S1" gate="1" pin="S"/>
@@ -12886,7 +12895,7 @@ Sourc: www.ctscorp.com</description>
 <label x="429.26" y="-17.78" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="TO_C4_CAP" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="OUT"/>
 <pinref part="C4" gate="G$1" pin="2"/>
@@ -12934,7 +12943,7 @@ Sourc: www.ctscorp.com</description>
 <label x="256.54" y="50.8" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="TO_C5_CAP" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="NR/FB"/>
 <pinref part="C5" gate="G$1" pin="1"/>
@@ -13035,7 +13044,7 @@ Sourc: www.ctscorp.com</description>
 <wire x1="274.32" y1="243.84" x2="274.32" y2="236.22" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="TO_Q1_MOS" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="Q1" gate="1" pin="D"/>
@@ -13049,7 +13058,7 @@ Sourc: www.ctscorp.com</description>
 <wire x1="383.54" y1="243.84" x2="383.54" y2="236.22" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="TO_Q2_MOS" class="0">
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <pinref part="Q2" gate="1" pin="D"/>
@@ -13063,7 +13072,7 @@ Sourc: www.ctscorp.com</description>
 <wire x1="492.76" y1="243.84" x2="492.76" y2="236.22" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="TO_Q3_MOS" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
 <pinref part="Q3" gate="1" pin="D"/>
@@ -13077,7 +13086,7 @@ Sourc: www.ctscorp.com</description>
 <wire x1="596.9" y1="246.38" x2="596.9" y2="238.76" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$15" class="0">
+<net name="TO_Q5_MOS" class="0">
 <segment>
 <pinref part="R14" gate="G$1" pin="1"/>
 <pinref part="Q5" gate="1" pin="D"/>
@@ -13800,7 +13809,7 @@ Sourc: www.ctscorp.com</description>
 <label x="106.68" y="187.96" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="TO_R20/C27" class="0">
 <segment>
 <pinref part="R20" gate="G$1" pin="2"/>
 <wire x1="414.02" y1="335.28" x2="421.64" y2="335.28" width="0.1524" layer="91"/>
@@ -13811,7 +13820,7 @@ Sourc: www.ctscorp.com</description>
 <pinref part="C27" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$17" class="0">
+<net name="TO_R18/C25" class="0">
 <segment>
 <pinref part="R18" gate="G$1" pin="2"/>
 <wire x1="416.56" y1="327.66" x2="436.88" y2="327.66" width="0.1524" layer="91"/>
@@ -13822,7 +13831,7 @@ Sourc: www.ctscorp.com</description>
 <pinref part="C25" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="TO_R19/C28" class="0">
 <segment>
 <pinref part="R19" gate="G$1" pin="2"/>
 <wire x1="434.34" y1="325.12" x2="454.66" y2="325.12" width="0.1524" layer="91"/>
@@ -13833,7 +13842,7 @@ Sourc: www.ctscorp.com</description>
 <pinref part="C28" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$30" class="0">
+<net name="TO_R22/C29" class="0">
 <segment>
 <pinref part="R22" gate="G$1" pin="2"/>
 <wire x1="452.12" y1="322.58" x2="472.44" y2="322.58" width="0.1524" layer="91"/>
