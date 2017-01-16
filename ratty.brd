@@ -4130,6 +4130,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C30" library="rcl" package="C0603" value="0.1uF" x="-308.0258" y="-117.5004"/>
 <element name="C31" library="rcl" package="C0603" value="4.7uF" x="-308.0258" y="-122.2502"/>
 <element name="C32" library="rcl" package="C0603" value="4.7uF" x="-308.0258" y="-127"/>
+<element name="C33" library="rcl" package="C0603" value="1uF" x="-308.0258" y="-131.7498"/>
 </elements>
 <signals>
 <signal name="BATTERY_2">
@@ -4462,7 +4463,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="3.2512" y1="37.4142" x2="2.1082" y2="38.5572" width="0.508" layer="1"/>
 <wire x1="2.1082" y1="38.5572" x2="2.1082" y2="40.922" width="0.508" layer="1"/>
 <wire x1="2.1082" y1="40.922" x2="2.0828" y2="40.9474" width="0.508" layer="1"/>
-<contactref element="C10" pad="1"/>
 <contactref element="U$22" pad="2"/>
 <contactref element="C11" pad="1"/>
 <contactref element="C16" pad="1"/>
@@ -4473,6 +4473,9 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="C31" pad="1"/>
 <contactref element="C32" pad="1"/>
 <contactref element="U$4" pad="1"/>
+<contactref element="C10" pad="1"/>
+<contactref element="C33" pad="1"/>
+<wire x1="-308.8758" y1="-127" x2="-308.8758" y2="-131.7498" width="0" layer="19" extent="1-1"/>
 <wire x1="-308.8758" y1="-122.2502" x2="-308.8758" y2="-127" width="0" layer="19" extent="1-1"/>
 <wire x1="-308.8758" y1="-117.5004" x2="-308.8758" y2="-122.2502" width="0" layer="19" extent="1-1"/>
 <wire x1="-306.578" y1="-112.014" x2="-308.8758" y2="-117.5004" width="0" layer="19" extent="1-1"/>
@@ -4545,8 +4548,10 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="67.7554" y1="50.1786" x2="66.9036" y2="49.3268" width="0.3048" layer="1"/>
 <wire x1="66.9036" y1="49.3268" x2="64.5296" y2="49.3268" width="0.3048" layer="1"/>
 <wire x1="64.5296" y1="49.3268" x2="63.1834" y2="50.673" width="0.3048" layer="1"/>
-<contactref element="C10" pad="2"/>
 <contactref element="U$7" pad="2"/>
+<contactref element="C10" pad="2"/>
+<contactref element="C33" pad="2"/>
+<wire x1="-300.2788" y1="-106.7562" x2="-307.1758" y2="-131.7498" width="0" layer="19" extent="1-1"/>
 <wire x1="40.5774" y1="11.9244" x2="-300.2788" y2="-106.7562" width="0" layer="19" extent="1-1"/>
 <wire x1="44.339840625" y1="29.557040625" x2="43.4848" y2="19.6088" width="0" layer="19" extent="1-1"/>
 <wire x1="64.5296" y1="49.3268" x2="44.339840625" y2="29.557040625" width="0" layer="19" extent="1-1"/>

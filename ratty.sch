@@ -12211,6 +12211,7 @@ http://www.bobstarr.net</description>
 <part name="GND34" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="C32" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="GND35" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="C33" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -12271,7 +12272,7 @@ http://www.bobstarr.net</description>
 <instance part="U1" gate="G$1" x="231.14" y="152.4"/>
 <instance part="IC2" gate="G$1" x="233.68" y="35.56"/>
 <instance part="U$4" gate="G$1" x="132.08" y="276.86"/>
-<instance part="C10" gate="G$1" x="-93.98" y="228.6"/>
+<instance part="C10" gate="G$1" x="-101.6" y="228.6"/>
 <instance part="C11" gate="G$1" x="-73.66" y="200.66"/>
 <instance part="C16" gate="G$1" x="-53.34" y="200.66"/>
 <instance part="C17" gate="G$1" x="-35.56" y="200.66"/>
@@ -12370,6 +12371,7 @@ http://www.bobstarr.net</description>
 <instance part="GND34" gate="G$1" x="20.32" y="185.42"/>
 <instance part="C32" gate="G$1" x="33.02" y="200.66"/>
 <instance part="GND35" gate="G$1" x="33.02" y="185.42"/>
+<instance part="C33" gate="G$1" x="-88.9" y="228.6"/>
 </instances>
 <busses>
 </busses>
@@ -12755,12 +12757,16 @@ http://www.bobstarr.net</description>
 <label x="256.54" y="50.8" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="C10" gate="G$1" pin="1"/>
-<wire x1="-93.98" y1="231.14" x2="-93.98" y2="233.68" width="0.1524" layer="91"/>
 <label x="-93.98" y="238.76" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="U$22" gate="G$1" pin="2"/>
 <wire x1="-93.98" y1="233.68" x2="-93.98" y2="238.76" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="-101.6" y1="231.14" x2="-93.98" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="231.14" x2="-93.98" y2="233.68" width="0.1524" layer="91"/>
 <junction x="-93.98" y="233.68"/>
+<pinref part="C33" gate="G$1" pin="1"/>
+<wire x1="-93.98" y1="231.14" x2="-88.9" y2="231.14" width="0.1524" layer="91"/>
+<junction x="-93.98" y="231.14"/>
 </segment>
 <segment>
 <pinref part="C11" gate="G$1" pin="1"/>
@@ -12892,12 +12898,16 @@ http://www.bobstarr.net</description>
 <wire x1="96.52" y1="93.98" x2="93.98" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C10" gate="G$1" pin="2"/>
-<wire x1="-93.98" y1="223.52" x2="-93.98" y2="220.98" width="0.1524" layer="91"/>
 <pinref part="U$7" gate="G$1" pin="2"/>
 <wire x1="-93.98" y1="220.98" x2="-93.98" y2="215.9" width="0.1524" layer="91"/>
-<junction x="-93.98" y="220.98"/>
 <pinref part="AGND9" gate="VR1" pin="AGND"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="-101.6" y1="223.52" x2="-93.98" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="223.52" x2="-93.98" y2="220.98" width="0.1524" layer="91"/>
+<junction x="-93.98" y="220.98"/>
+<pinref part="C33" gate="G$1" pin="2"/>
+<wire x1="-93.98" y1="223.52" x2="-88.9" y2="223.52" width="0.1524" layer="91"/>
+<junction x="-93.98" y="223.52"/>
 </segment>
 </net>
 <net name="PC_10_EMIT_CIRCUIT_1" class="0">
