@@ -12351,8 +12351,8 @@ Sourc: www.ctscorp.com</description>
 <part name="C23" library="rcl" deviceset="C-EU" device="C0603" value="2.2nF"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="U$20" library="splitter" deviceset="SPLITTER" device=""/>
-<part name="U$21" library="splitter" deviceset="SPLITTER" device=""/>
+<part name="D_SPLITTER" library="splitter" deviceset="SPLITTER" device=""/>
+<part name="A_SPLITTER" library="splitter" deviceset="SPLITTER" device=""/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="AGND1" library="supply1" deviceset="AGND" device=""/>
 <part name="GND18" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
@@ -12367,7 +12367,7 @@ Sourc: www.ctscorp.com</description>
 <part name="AGND4" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND5" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND6" library="supply1" deviceset="AGND" device=""/>
-<part name="U$7" library="splitter" deviceset="SPLITTER" device=""/>
+<part name="M_SPLITTER" library="splitter" deviceset="SPLITTER" device=""/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
@@ -12379,11 +12379,11 @@ Sourc: www.ctscorp.com</description>
 <part name="GND13" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="GND14" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="R8" library="rcl" deviceset="R-US_" device="R0603" value="100"/>
-<part name="U$10" library="splitter" deviceset="SPLITTER" device=""/>
-<part name="U$12" library="splitter" deviceset="SPLITTER" device=""/>
+<part name="SPLIT_GYRO_VDD" library="splitter" deviceset="SPLITTER" device=""/>
+<part name="SPLIT_GYRO_LOGIC" library="splitter" deviceset="SPLITTER" device=""/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X5" device=""/>
 <part name="C26" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
-<part name="U$14" library="splitter" deviceset="SPLITTER" device=""/>
+<part name="SPLIT_VSS_CAP" library="splitter" deviceset="SPLITTER" device=""/>
 <part name="U$17" library="LEDs" deviceset="LED-TRICOLOR" device=""/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="R9" library="rcl" deviceset="R-US_" device="R0603" value="120"/>
@@ -12487,8 +12487,8 @@ Sourc: www.ctscorp.com</description>
 <instance part="C23" gate="G$1" x="360.68" y="149.86"/>
 <instance part="GND17" gate="1" x="254" y="147.32" rot="R90"/>
 <instance part="GND16" gate="1" x="261.62" y="149.86" rot="R90"/>
-<instance part="U$20" gate="G$1" x="43.18" y="53.34" rot="R180"/>
-<instance part="U$21" gate="G$1" x="43.18" y="60.96" rot="R180"/>
+<instance part="D_SPLITTER" gate="G$1" x="43.18" y="53.34" rot="R180"/>
+<instance part="A_SPLITTER" gate="G$1" x="43.18" y="60.96" rot="R180"/>
 <instance part="GND1" gate="1" x="50.8" y="43.18"/>
 <instance part="AGND1" gate="VR1" x="35.56" y="60.96" rot="R270"/>
 <instance part="GND18" gate="G$1" x="35.56" y="53.34" rot="R270"/>
@@ -12503,7 +12503,7 @@ Sourc: www.ctscorp.com</description>
 <instance part="AGND4" gate="VR1" x="505.46" y="109.22"/>
 <instance part="AGND5" gate="VR1" x="553.72" y="109.22"/>
 <instance part="AGND6" gate="VR1" x="599.44" y="109.22"/>
-<instance part="U$7" gate="G$1" x="43.18" y="71.12" rot="R180"/>
+<instance part="M_SPLITTER" gate="G$1" x="43.18" y="71.12" rot="R180"/>
 <instance part="GND4" gate="G$1" x="596.9" y="190.5"/>
 <instance part="GND6" gate="G$1" x="492.76" y="187.96"/>
 <instance part="GND7" gate="G$1" x="383.54" y="185.42"/>
@@ -12515,11 +12515,11 @@ Sourc: www.ctscorp.com</description>
 <instance part="GND13" gate="G$1" x="340.36" y="132.08"/>
 <instance part="GND14" gate="G$1" x="360.68" y="134.62"/>
 <instance part="R8" gate="G$1" x="-12.7" y="294.64"/>
-<instance part="U$10" gate="G$1" x="350.52" y="167.64" rot="R90"/>
-<instance part="U$12" gate="G$1" x="294.64" y="160.02" rot="R90"/>
+<instance part="SPLIT_GYRO_VDD" gate="G$1" x="350.52" y="167.64" rot="R90"/>
+<instance part="SPLIT_GYRO_LOGIC" gate="G$1" x="294.64" y="160.02" rot="R90"/>
 <instance part="JP1" gate="A" x="259.08" y="299.72"/>
 <instance part="C26" gate="G$1" x="213.36" y="223.52" rot="R90"/>
-<instance part="U$14" gate="G$1" x="55.88" y="220.98" rot="R270"/>
+<instance part="SPLIT_VSS_CAP" gate="G$1" x="55.88" y="220.98" rot="R270"/>
 <instance part="U$17" gate="G$1" x="144.78" y="193.04"/>
 <instance part="GND15" gate="G$1" x="177.8" y="190.5" rot="R90"/>
 <instance part="R9" gate="G$1" x="114.3" y="193.04"/>
@@ -12612,16 +12612,16 @@ Sourc: www.ctscorp.com</description>
 <wire x1="50.8" y1="71.12" x2="50.8" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="78.74" x2="58.42" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<pinref part="U$21" gate="G$1" pin="1"/>
+<pinref part="A_SPLITTER" gate="G$1" pin="1"/>
 <junction x="50.8" y="60.96"/>
-<pinref part="U$20" gate="G$1" pin="1"/>
+<pinref part="D_SPLITTER" gate="G$1" pin="1"/>
 <junction x="50.8" y="53.34"/>
-<pinref part="U$7" gate="G$1" pin="1"/>
+<pinref part="M_SPLITTER" gate="G$1" pin="1"/>
 <junction x="50.8" y="71.12"/>
 </segment>
 <segment>
 <pinref part="GND18" gate="G$1" pin="GND"/>
-<pinref part="U$20" gate="G$1" pin="2"/>
+<pinref part="D_SPLITTER" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -12731,8 +12731,9 @@ Sourc: www.ctscorp.com</description>
 <label x="256.54" y="50.8" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$10" gate="G$1" pin="2"/>
+<pinref part="SPLIT_GYRO_VDD" gate="G$1" pin="2"/>
 <wire x1="350.52" y1="172.72" x2="350.52" y2="175.26" width="0.1524" layer="91"/>
+<label x="350.52" y="175.26" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="L_VCC"/>
@@ -12947,7 +12948,7 @@ Sourc: www.ctscorp.com</description>
 </net>
 <net name="AGND" class="0">
 <segment>
-<pinref part="U$21" gate="G$1" pin="2"/>
+<pinref part="A_SPLITTER" gate="G$1" pin="2"/>
 <pinref part="AGND1" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
@@ -13207,7 +13208,7 @@ Sourc: www.ctscorp.com</description>
 <junction x="340.36" y="157.48"/>
 <wire x1="350.52" y1="157.48" x2="350.52" y2="160.02" width="0.1524" layer="91"/>
 <label x="335.28" y="160.02" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="U$10" gate="G$1" pin="1"/>
+<pinref part="SPLIT_GYRO_VDD" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="GRYOVLOGIC" class="0">
@@ -13233,7 +13234,7 @@ Sourc: www.ctscorp.com</description>
 <junction x="307.34" y="152.4"/>
 <wire x1="314.96" y1="152.4" x2="314.96" y2="154.94" width="0.1524" layer="91"/>
 <label x="314.96" y="154.94" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="U$12" gate="G$1" pin="1"/>
+<pinref part="SPLIT_GYRO_LOGIC" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="GYROREGOUT" class="0">
@@ -13318,7 +13319,7 @@ Sourc: www.ctscorp.com</description>
 <segment>
 <pinref part="GND20" gate="G$1" pin="GND"/>
 <wire x1="60.96" y1="228.6" x2="55.88" y2="228.6" width="0.1524" layer="91"/>
-<pinref part="U$14" gate="G$1" pin="1"/>
+<pinref part="SPLIT_VSS_CAP" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="228.6" x2="45.72" y2="228.6" width="0.1524" layer="91"/>
 <junction x="55.88" y="228.6"/>
 </segment>
@@ -13525,7 +13526,7 @@ Sourc: www.ctscorp.com</description>
 </net>
 <net name="MGND" class="0">
 <segment>
-<pinref part="U$7" gate="G$1" pin="2"/>
+<pinref part="M_SPLITTER" gate="G$1" pin="2"/>
 <wire x1="38.1" y1="71.12" x2="33.02" y2="71.12" width="0.1524" layer="91"/>
 <label x="33.02" y="71.12" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -13586,7 +13587,7 @@ Sourc: www.ctscorp.com</description>
 <label x="246.38" y="320.04" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$12" gate="G$1" pin="2"/>
+<pinref part="SPLIT_GYRO_LOGIC" gate="G$1" pin="2"/>
 <wire x1="294.64" y1="165.1" x2="294.64" y2="167.64" width="0.1524" layer="91"/>
 <label x="294.64" y="167.64" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
@@ -13649,7 +13650,7 @@ Sourc: www.ctscorp.com</description>
 <label x="223.52" y="223.52" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$14" gate="G$1" pin="2"/>
+<pinref part="SPLIT_VSS_CAP" gate="G$1" pin="2"/>
 <wire x1="55.88" y1="215.9" x2="55.88" y2="210.82" width="0.1524" layer="91"/>
 <label x="55.88" y="210.82" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
