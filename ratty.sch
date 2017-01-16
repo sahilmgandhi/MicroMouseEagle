@@ -13037,7 +13037,7 @@ Sourc: www.ctscorp.com</description>
 <label x="53.34" y="243.84" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="LED/R5" class="0">
 <segment>
 <pinref part="U$15" gate="G$1" pin="-"/>
 <pinref part="R5" gate="G$1" pin="2"/>
@@ -13051,7 +13051,7 @@ Sourc: www.ctscorp.com</description>
 <wire x1="274.32" y1="226.06" x2="274.32" y2="218.44" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="LED/R7" class="0">
 <segment>
 <pinref part="U$16" gate="G$1" pin="-"/>
 <pinref part="R7" gate="G$1" pin="2"/>
@@ -13065,7 +13065,7 @@ Sourc: www.ctscorp.com</description>
 <wire x1="383.54" y1="226.06" x2="383.54" y2="218.44" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="LED/R11" class="0">
 <segment>
 <pinref part="U$18" gate="G$1" pin="-"/>
 <pinref part="R11" gate="G$1" pin="2"/>
@@ -13079,7 +13079,7 @@ Sourc: www.ctscorp.com</description>
 <wire x1="492.76" y1="226.06" x2="492.76" y2="218.44" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="LED/R14" class="0">
 <segment>
 <pinref part="U$19" gate="G$1" pin="-"/>
 <pinref part="R14" gate="G$1" pin="2"/>
