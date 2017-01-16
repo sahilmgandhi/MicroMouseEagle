@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -12412,6 +12412,7 @@ Sourc: www.ctscorp.com</description>
 <part name="AGND7" library="supply1" deviceset="AGND" device=""/>
 <part name="R29" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="AGND8" library="supply1" deviceset="AGND" device=""/>
+<part name="GND27" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12548,6 +12549,7 @@ Sourc: www.ctscorp.com</description>
 <instance part="AGND7" gate="VR1" x="86.36" y="121.92" rot="R90"/>
 <instance part="R29" gate="G$1" x="88.9" y="93.98" rot="R180"/>
 <instance part="AGND8" gate="VR1" x="99.06" y="93.98" rot="R90"/>
+<instance part="GND27" gate="G$1" x="213.36" y="236.22" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -12716,21 +12718,6 @@ Sourc: www.ctscorp.com</description>
 <label x="596.9" y="276.86" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="EN1"/>
-<wire x1="220.98" y1="43.18" x2="208.28" y2="43.18" width="0.1524" layer="91"/>
-<label x="208.28" y="43.18" size="1.778" layer="95" rot="MR0" xref="yes"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="G$1" pin="EN2"/>
-<wire x1="220.98" y1="33.02" x2="208.28" y2="33.02" width="0.1524" layer="91"/>
-<label x="208.28" y="33.02" size="1.778" layer="95" rot="MR0" xref="yes"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="G$1" pin="VSS"/>
-<wire x1="246.38" y1="50.8" x2="256.54" y2="50.8" width="0.1524" layer="91"/>
-<label x="256.54" y="50.8" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="SPLIT_GYRO_VDD" gate="G$1" pin="2"/>
 <wire x1="350.52" y1="172.72" x2="350.52" y2="175.26" width="0.1524" layer="91"/>
 <label x="350.52" y="175.26" size="1.778" layer="95" rot="R90" xref="yes"/>
@@ -12787,12 +12774,22 @@ Sourc: www.ctscorp.com</description>
 <wire x1="220.98" y1="40.64" x2="198.12" y2="40.64" width="0.1524" layer="91"/>
 <label x="198.12" y="40.64" size="1.778" layer="95" rot="MR0" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA9-TIM1_CH2/I2C3_SMBA/USART1_TX/SDIO_D2"/>
+<wire x1="203.2" y1="307.34" x2="210.82" y2="307.34" width="0.1524" layer="91"/>
+<label x="210.82" y="307.34" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="L_DIGITAL_IN_1" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="IN1"/>
 <wire x1="220.98" y1="45.72" x2="198.12" y2="45.72" width="0.1524" layer="91"/>
 <label x="198.12" y="45.72" size="1.778" layer="95" rot="MR0" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA8-MCO_1/TIM1_CH1/I2C3_SCL/USART1_CK/SDIO_D1"/>
+<wire x1="203.2" y1="309.88" x2="210.82" y2="309.88" width="0.1524" layer="91"/>
+<label x="210.82" y="309.88" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="R_DIGITAL_IN_1" class="0">
@@ -12801,12 +12798,22 @@ Sourc: www.ctscorp.com</description>
 <wire x1="220.98" y1="30.48" x2="198.12" y2="30.48" width="0.1524" layer="91"/>
 <label x="198.12" y="30.48" size="1.778" layer="95" rot="MR0" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA10-TIM1_CH3/SPI5_MOSI/USART1_RX/USB_FS_ID"/>
+<wire x1="203.2" y1="304.8" x2="210.82" y2="304.8" width="0.1524" layer="91"/>
+<label x="210.82" y="304.8" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="R_DIGITAL_IN_2" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="IN3"/>
 <wire x1="220.98" y1="35.56" x2="198.12" y2="35.56" width="0.1524" layer="91"/>
 <label x="198.12" y="35.56" size="1.778" layer="95" rot="MR0" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA11-TIM1_CH4/SPI4_MISO/USART1_CTS/USB_FS_DM"/>
+<wire x1="203.2" y1="302.26" x2="210.82" y2="302.26" width="0.1524" layer="91"/>
+<label x="210.82" y="302.26" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="3.3V_NUCLEO" class="0">
@@ -12920,6 +12927,11 @@ Sourc: www.ctscorp.com</description>
 <wire x1="487.68" y1="322.58" x2="502.92" y2="322.58" width="0.1524" layer="91"/>
 <wire x1="502.92" y1="322.58" x2="502.92" y2="347.98" width="0.1524" layer="91"/>
 <label x="502.92" y="347.98" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="VSS"/>
+<wire x1="246.38" y1="50.8" x2="256.54" y2="50.8" width="0.1524" layer="91"/>
+<label x="256.54" y="50.8" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -13121,7 +13133,7 @@ Sourc: www.ctscorp.com</description>
 <label x="53.34" y="330.2" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="CAP_C10_VDD_ON_MCU" class="0">
+<net name="CAP_C10_VDD" class="0">
 <segment>
 <wire x1="60.96" y1="317.5" x2="53.34" y2="317.5" width="0.1524" layer="91"/>
 <label x="53.34" y="317.5" size="1.778" layer="95" rot="R180" xref="yes"/>
@@ -13523,6 +13535,10 @@ Sourc: www.ctscorp.com</description>
 <junction x="408.94" y="302.26"/>
 <pinref part="GND26" gate="G$1" pin="GND"/>
 </segment>
+<segment>
+<wire x1="200.66" y1="236.22" x2="210.82" y2="236.22" width="0.1524" layer="91"/>
+<pinref part="GND27" gate="G$1" pin="GND"/>
+</segment>
 </net>
 <net name="MGND" class="0">
 <segment>
@@ -13830,11 +13846,6 @@ Sourc: www.ctscorp.com</description>
 </net>
 <net name="DIP_BUTTON_1" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="PB12-TIM1_BKIN/I2C2_SMBA/SPI2_NSS/SPI4_NSS/SPI3_SCK"/>
-<wire x1="203.2" y1="254" x2="208.28" y2="254" width="0.1524" layer="91"/>
-<label x="208.28" y="254" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="S2" gate="G$1" pin="1"/>
 <wire x1="408.94" y1="320.04" x2="408.94" y2="322.58" width="0.1524" layer="91"/>
 <pinref part="R22" gate="G$1" pin="1"/>
@@ -13843,13 +13854,13 @@ Sourc: www.ctscorp.com</description>
 <junction x="408.94" y="322.58"/>
 <label x="388.62" y="322.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="PB15-RTC_50HZ/TIM1_CH3N/SPI2_MOSI/SDIO_CK"/>
+<wire x1="203.2" y1="246.38" x2="208.28" y2="246.38" width="0.1524" layer="91"/>
+<label x="208.28" y="246.38" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="DIP_BUTTON_2" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PB13-TIM1_CH1N/SPI2_SCK/I2S2_CL"/>
-<wire x1="203.2" y1="251.46" x2="208.28" y2="251.46" width="0.1524" layer="91"/>
-<label x="208.28" y="251.46" size="1.778" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="S2" gate="G$1" pin="2"/>
 <wire x1="406.4" y1="320.04" x2="406.4" y2="325.12" width="0.1524" layer="91"/>
@@ -13859,13 +13870,13 @@ Sourc: www.ctscorp.com</description>
 <junction x="406.4" y="325.12"/>
 <label x="388.62" y="325.12" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="DIP_BUTTON_3" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB14-TIM1_CH2N/SPI2_MISO/I2S2EXT_SD/SDIO_D6"/>
 <wire x1="203.2" y1="248.92" x2="208.28" y2="248.92" width="0.1524" layer="91"/>
 <label x="208.28" y="248.92" size="1.778" layer="95" xref="yes"/>
 </segment>
+</net>
+<net name="DIP_BUTTON_3" class="0">
 <segment>
 <pinref part="S2" gate="G$1" pin="3"/>
 <wire x1="403.86" y1="320.04" x2="403.86" y2="327.66" width="0.1524" layer="91"/>
@@ -13875,13 +13886,13 @@ Sourc: www.ctscorp.com</description>
 <junction x="403.86" y="327.66"/>
 <label x="388.62" y="327.66" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="PB13-TIM1_CH1N/SPI2_SCK/I2S2_CL"/>
+<wire x1="203.2" y1="251.46" x2="208.28" y2="251.46" width="0.1524" layer="91"/>
+<label x="208.28" y="251.46" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="DIP_BUTTON_4" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PB15-RTC_50HZ/TIM1_CH3N/SPI2_MOSI/SDIO_CK"/>
-<wire x1="203.2" y1="246.38" x2="208.28" y2="246.38" width="0.1524" layer="91"/>
-<label x="208.28" y="246.38" size="1.778" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="S2" gate="G$1" pin="4"/>
 <wire x1="401.32" y1="320.04" x2="401.32" y2="335.28" width="0.1524" layer="91"/>
@@ -13890,6 +13901,11 @@ Sourc: www.ctscorp.com</description>
 <wire x1="401.32" y1="335.28" x2="388.62" y2="335.28" width="0.1524" layer="91"/>
 <junction x="401.32" y="335.28"/>
 <label x="388.62" y="335.28" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="PB12-TIM1_BKIN/I2C2_SMBA/SPI2_NSS/SPI4_NSS/SPI3_SCK"/>
+<wire x1="203.2" y1="254" x2="208.28" y2="254" width="0.1524" layer="91"/>
+<label x="208.28" y="254" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VOLTAGE_BATTERY_1" class="0">
@@ -13917,6 +13933,30 @@ Sourc: www.ctscorp.com</description>
 <pinref part="R29" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="93.98" x2="83.82" y2="93.98" width="0.1524" layer="91"/>
 <label x="81.28" y="93.98" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+</net>
+<net name="HBRIDGE_EN1" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PB4-JTRST/TIM3_CH1/SPI1_MISO/SPI3_MISO/I2S3EXT_SD/I2C3_SDA/DIO_D0"/>
+<wire x1="203.2" y1="274.32" x2="213.36" y2="274.32" width="0.1524" layer="91"/>
+<label x="213.36" y="274.32" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="EN1"/>
+<wire x1="220.98" y1="43.18" x2="208.28" y2="43.18" width="0.1524" layer="91"/>
+<label x="208.28" y="43.18" size="1.778" layer="95" rot="MR0" xref="yes"/>
+</segment>
+</net>
+<net name="HBRIDGE_EN2" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PB5-TIM3_CH2/I2C1_SMBA/SPI1_MOSI/SDIO_D3"/>
+<wire x1="203.2" y1="271.78" x2="213.36" y2="271.78" width="0.1524" layer="91"/>
+<label x="213.36" y="271.78" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="EN2"/>
+<wire x1="220.98" y1="33.02" x2="208.28" y2="33.02" width="0.1524" layer="91"/>
+<label x="208.28" y="33.02" size="1.778" layer="95" rot="MR0" xref="yes"/>
 </segment>
 </net>
 </nets>
