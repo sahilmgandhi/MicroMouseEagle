@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -12370,7 +12370,7 @@ http://www.bobstarr.net</description>
 <instance part="C31" gate="G$1" x="5.08" y="172.72"/>
 <instance part="GND34" gate="G$1" x="5.08" y="157.48"/>
 <instance part="C32" gate="G$1" x="17.78" y="172.72"/>
-<instance part="GND35" gate="G$1" x="33.02" y="185.42"/>
+<instance part="GND35" gate="G$1" x="17.78" y="157.48"/>
 <instance part="C33" gate="G$1" x="-88.9" y="228.6"/>
 </instances>
 <busses>
@@ -12798,23 +12798,23 @@ http://www.bobstarr.net</description>
 <wire x1="-7.62" y1="175.26" x2="-7.62" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="180.34" x2="-20.32" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="C31" gate="G$1" pin="1"/>
-<wire x1="-7.62" y1="180.34" x2="20.32" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="208.28" x2="5.08" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="180.34" x2="5.08" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="180.34" x2="5.08" y2="175.26" width="0.1524" layer="91"/>
 <junction x="-7.62" y="180.34"/>
 <label x="-68.58" y="182.88" size="1.778" layer="95" rot="R90" xref="yes"/>
 <label x="-50.8" y="182.88" size="1.778" layer="95" rot="R90" xref="yes"/>
 <label x="-33.02" y="182.88" size="1.778" layer="95" rot="R90" xref="yes"/>
 <label x="-20.32" y="182.88" size="1.778" layer="95" rot="R90" xref="yes"/>
-<label x="7.62" y="210.82" size="1.778" layer="95" rot="R90" xref="yes"/>
-<label x="20.32" y="210.82" size="1.778" layer="95" rot="R90" xref="yes"/>
+<label x="-7.62" y="180.34" size="1.778" layer="95" rot="R90" xref="yes"/>
+<label x="5.08" y="182.88" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="C32" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="208.28" x2="33.02" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="208.28" x2="17.78" y2="175.26" width="0.1524" layer="91"/>
-<junction x="20.32" y="208.28"/>
-<wire x1="20.32" y1="208.28" x2="20.32" y2="210.82" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="208.28" x2="33.02" y2="210.82" width="0.1524" layer="91"/>
-<junction x="33.02" y="208.28"/>
-<label x="33.02" y="210.82" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="5.08" y1="180.34" x2="17.78" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="180.34" x2="17.78" y2="175.26" width="0.1524" layer="91"/>
+<junction x="5.08" y="180.34"/>
+<wire x1="5.08" y1="180.34" x2="5.08" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="180.34" x2="17.78" y2="182.88" width="0.1524" layer="91"/>
+<junction x="17.78" y="180.34"/>
+<label x="17.78" y="182.88" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="VBAT"/>
@@ -13394,8 +13394,8 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="C32" gate="G$1" pin="2"/>
-<wire x1="17.78" y1="167.64" x2="33.02" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="GND35" gate="G$1" pin="GND"/>
+<wire x1="17.78" y1="160.02" x2="17.78" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MGND" class="0">
@@ -13490,8 +13490,6 @@ http://www.bobstarr.net</description>
 <wire x1="60.96" y1="256.54" x2="50.8" y2="256.54" width="0.1524" layer="91"/>
 <label x="50.8" y="256.54" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="PV6_TX_PIN" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="4"/>
 <wire x1="256.54" y1="297.18" x2="233.68" y2="297.18" width="0.1524" layer="91"/>
