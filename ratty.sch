@@ -12584,9 +12584,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="198.12" y="40.64" size="1.778" layer="95" rot="MR0" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="PA9-TIM1_CH2/I2C3_SMBA/USART1_TX/SDIO_D2"/>
-<wire x1="200.66" y1="307.34" x2="210.82" y2="307.34" width="0.1524" layer="91"/>
-<label x="210.82" y="307.34" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PB8-TIM4_CH3/TIM10_CH1/I2C1_SCL/SPI5_MOSI/I2C3_SDA"/>
+<wire x1="200.66" y1="264.16" x2="205.74" y2="264.16" width="0.1524" layer="91"/>
+<label x="205.74" y="264.16" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="L_DIGITAL_IN_1" class="0">
@@ -12596,9 +12596,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="198.12" y="45.72" size="1.778" layer="95" rot="MR0" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="PA8-MCO_1/TIM1_CH1/I2C3_SCL/USART1_CK/SDIO_D1"/>
-<wire x1="200.66" y1="309.88" x2="210.82" y2="309.88" width="0.1524" layer="91"/>
-<label x="210.82" y="309.88" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PB7-TIM4_CH2/I2C1_SDA/USART1_RX/SDIO_D0"/>
+<wire x1="200.66" y1="266.7" x2="208.28" y2="266.7" width="0.1524" layer="91"/>
+<label x="205.74" y="266.7" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="R_DIGITAL_IN_1" class="0">
@@ -13037,30 +13037,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="596.9" y1="228.6" x2="596.9" y2="220.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="PA_0_ENCODER1_1" class="0">
-<segment>
-<label x="213.36" y="330.2" size="1.778" layer="95" xref="yes"/>
-<pinref part="U$4" gate="G$1" pin="PA0-TIM2_CH1/TIM2_ET/TIM5_CH1"/>
-<wire x1="200.66" y1="330.2" x2="213.36" y2="330.2" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$8" gate="G$1" pin="L_CHA"/>
-<wire x1="345.44" y1="-5.08" x2="345.44" y2="-15.24" width="0.1524" layer="91"/>
-<label x="345.44" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
-<net name="PA_1_ENCODER1_2" class="0">
-<segment>
-<wire x1="200.66" y1="327.66" x2="218.44" y2="327.66" width="0.1524" layer="91"/>
-<label x="218.44" y="327.66" size="1.778" layer="95" xref="yes"/>
-<pinref part="U$4" gate="G$1" pin="PA1-TIM2_CH2/TIM5_CH2/SPI4_MOSI/I2S4_SD"/>
-</segment>
-<segment>
-<pinref part="U$8" gate="G$1" pin="L_CHB"/>
-<wire x1="350.52" y1="-5.08" x2="350.52" y2="-15.24" width="0.1524" layer="91"/>
-<label x="350.52" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
 <net name="PA_6_REC_CIRCUIT_2" class="0">
 <segment>
 <pinref part="U$9" gate="G$1" pin="E"/>
@@ -13137,18 +13113,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="360.68" y="157.48" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="PB8_I2C1SCL_FOR_GYRO" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PB8-TIM4_CH3/TIM10_CH1/I2C1_SCL/SPI5_MOSI/I2C3_SDA"/>
-<wire x1="200.66" y1="264.16" x2="205.74" y2="264.16" width="0.1524" layer="91"/>
-<label x="205.74" y="264.16" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="SCL"/>
-<wire x1="246.38" y1="157.48" x2="251.46" y2="157.48" width="0.1524" layer="91"/>
-<label x="251.46" y="157.48" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="PB_0_EMIT_CIRCUIT_3" class="0">
 <segment>
 <pinref part="Q3" gate="1" pin="G"/>
@@ -13163,30 +13127,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="200.66" y1="284.48" x2="213.36" y2="284.48" width="0.1524" layer="91"/>
 <label x="213.36" y="284.48" size="1.778" layer="95" xref="yes"/>
 <pinref part="U$4" gate="G$1" pin="PB0-TIM1_CH2N/TIM3_CH3/SPI5_SCK"/>
-</segment>
-</net>
-<net name="PB7_I2CSDA_FOR_GYRO" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PB7-TIM4_CH2/I2C1_SDA/USART1_RX/SDIO_D0"/>
-<wire x1="200.66" y1="266.7" x2="208.28" y2="266.7" width="0.1524" layer="91"/>
-<label x="208.28" y="266.7" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="SDA"/>
-<wire x1="246.38" y1="160.02" x2="251.46" y2="160.02" width="0.1524" layer="91"/>
-<label x="251.46" y="160.02" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="PB9_GYROCLK" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PB9-TIM4_CH4/TIM11_CH11/I2C1_SDA/SPI2_NSS/I2C2_SDA"/>
-<wire x1="200.66" y1="261.62" x2="208.28" y2="261.62" width="0.1524" layer="91"/>
-<label x="208.28" y="261.62" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="CLKIN"/>
-<wire x1="246.38" y1="144.78" x2="251.46" y2="144.78" width="0.1524" layer="91"/>
-<label x="251.46" y="144.78" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="DGND" class="0">
@@ -13547,18 +13487,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="R17" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="PB3_ENCODER2_2" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PB3-JTDO-SWO/TIME2_CH2/SPI1_SCK/SPI3_SCK/USART1_RX/I2C2_SDA"/>
-<wire x1="200.66" y1="276.86" x2="213.36" y2="276.86" width="0.1524" layer="91"/>
-<label x="213.36" y="276.86" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U$8" gate="G$1" pin="R_CHB"/>
-<wire x1="401.32" y1="-5.08" x2="401.32" y2="-15.24" width="0.1524" layer="91"/>
-<label x="401.32" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
 <net name="PA_7_REC_CIRCUIT_1" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA7-TIM1_CH1N/TIM3_CH2"/>
@@ -13573,18 +13501,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="457.2" y1="134.62" x2="444.5" y2="134.62" width="0.1524" layer="91"/>
 <junction x="457.2" y="134.62"/>
 <label x="444.5" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="PA_5_ENCODER2_1" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PA5-TIM2_CH1/TIM2_ET/SPI1_SCK/I2S1_CK"/>
-<wire x1="200.66" y1="317.5" x2="208.28" y2="317.5" width="0.1524" layer="91"/>
-<label x="208.28" y="317.5" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U$8" gate="G$1" pin="R_CHA"/>
-<wire x1="396.24" y1="-5.08" x2="396.24" y2="-15.24" width="0.1524" layer="91"/>
-<label x="396.24" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="PC8_REC_CIRCUIT_3" class="0">
@@ -13605,11 +13521,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="PC9_REC_CIRCUIT_4" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="PC9-MCO_2/TIM3)CH4/I2C3_SDA/SDIO_D1"/>
-<wire x1="58.42" y1="248.92" x2="55.88" y2="248.92" width="0.1524" layer="91"/>
-<label x="58.42" y="248.92" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U$13" gate="G$1" pin="E"/>
 <pinref part="R12" gate="G$1" pin="2"/>
 <wire x1="599.44" y1="139.7" x2="599.44" y2="134.62" width="0.1524" layer="91"/>
@@ -13617,6 +13528,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="599.44" y1="134.62" x2="586.74" y2="134.62" width="0.1524" layer="91"/>
 <junction x="599.44" y="134.62"/>
 <label x="586.74" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="PC12-SPI3_MOSI/I2S3_SD/SDIO_CK"/>
+<wire x1="58.42" y1="241.3" x2="45.72" y2="241.3" width="0.1524" layer="91"/>
+<label x="45.72" y="241.3" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="RED_LED" class="0">
@@ -13812,6 +13728,90 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="IC2" gate="G$1" pin="EN2"/>
 <wire x1="220.98" y1="33.02" x2="208.28" y2="33.02" width="0.1524" layer="91"/>
 <label x="208.28" y="33.02" size="1.778" layer="95" rot="MR0" xref="yes"/>
+</segment>
+</net>
+<net name="I2CSCL_FOR_GYRO" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA8-MCO_1/TIM1_CH1/I2C3_SCL/USART1_CK/SDIO_D1"/>
+<wire x1="200.66" y1="309.88" x2="210.82" y2="309.88" width="0.1524" layer="91"/>
+<label x="210.82" y="309.88" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="SCL"/>
+<wire x1="246.38" y1="157.48" x2="251.46" y2="157.48" width="0.1524" layer="91"/>
+<label x="251.46" y="157.48" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="GYROCLK" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA9-TIM1_CH2/I2C3_SMBA/USART1_TX/SDIO_D2"/>
+<wire x1="200.66" y1="307.34" x2="210.82" y2="307.34" width="0.1524" layer="91"/>
+<label x="210.82" y="307.34" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="CLKIN"/>
+<wire x1="246.38" y1="144.78" x2="251.46" y2="144.78" width="0.1524" layer="91"/>
+<label x="251.46" y="144.78" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="I2CSDA_FOR_GYRO" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PC9-MCO_2/TIM3)CH4/I2C3_SDA/SDIO_D1"/>
+<wire x1="58.42" y1="248.92" x2="55.88" y2="248.92" width="0.1524" layer="91"/>
+<label x="58.42" y="248.92" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="SDA"/>
+<wire x1="246.38" y1="160.02" x2="251.46" y2="160.02" width="0.1524" layer="91"/>
+<label x="251.46" y="160.02" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="ENCODER2_1" class="0">
+<segment>
+<label x="213.36" y="330.2" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PA0-TIM2_CH1/TIM2_ET/TIM5_CH1"/>
+<wire x1="200.66" y1="330.2" x2="213.36" y2="330.2" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="R_CHA"/>
+<wire x1="396.24" y1="-5.08" x2="396.24" y2="-15.24" width="0.1524" layer="91"/>
+<label x="396.24" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="ENCODER2_2" class="0">
+<segment>
+<wire x1="200.66" y1="327.66" x2="218.44" y2="327.66" width="0.1524" layer="91"/>
+<label x="218.44" y="327.66" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PA1-TIM2_CH2/TIM5_CH2/SPI4_MOSI/I2S4_SD"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="R_CHB"/>
+<wire x1="401.32" y1="-5.08" x2="401.32" y2="-15.24" width="0.1524" layer="91"/>
+<label x="401.32" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="ENCODER1_1" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA5-TIM2_CH1/TIM2_ET/SPI1_SCK/I2S1_CK"/>
+<wire x1="200.66" y1="317.5" x2="208.28" y2="317.5" width="0.1524" layer="91"/>
+<label x="208.28" y="317.5" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="L_CHA"/>
+<wire x1="345.44" y1="-5.08" x2="345.44" y2="-15.24" width="0.1524" layer="91"/>
+<label x="345.44" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="ENCODER1_2" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PB3-JTDO-SWO/TIME2_CH2/SPI1_SCK/SPI3_SCK/USART1_RX/I2C2_SDA"/>
+<wire x1="200.66" y1="276.86" x2="213.36" y2="276.86" width="0.1524" layer="91"/>
+<label x="213.36" y="276.86" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="L_CHB"/>
+<wire x1="350.52" y1="-5.08" x2="350.52" y2="-15.24" width="0.1524" layer="91"/>
+<label x="350.52" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 </nets>
