@@ -12205,7 +12205,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="GND27" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="S1" library="switch-ck" deviceset="L101-XX-X-MS" device=""/>
 <part name="AGND9" library="supply1" deviceset="AGND" device=""/>
-<part name="GND28" library="supply2" deviceset="DGND" device=""/>
 <part name="GND30" library="supply2" deviceset="DGND" device=""/>
 <part name="GND31" library="supply2" deviceset="DGND" device=""/>
 <part name="C30" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
@@ -12223,6 +12222,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="AGND1" library="supply1" deviceset="AGND" device=""/>
 <part name="SUPPLY1" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY3" library="supply2" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12359,7 +12359,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="GND27" gate="G$1" x="213.36" y="236.22" rot="R90"/>
 <instance part="S1" gate="G$1" x="43.18" y="114.3" rot="R90"/>
 <instance part="AGND9" gate="VR1" x="-93.98" y="213.36"/>
-<instance part="GND28" gate="G$1" x="-88.9" y="157.48"/>
 <instance part="GND30" gate="G$1" x="-50.8" y="157.48"/>
 <instance part="GND31" gate="G$1" x="-33.02" y="157.48"/>
 <instance part="C30" gate="G$1" x="-7.62" y="172.72"/>
@@ -12377,6 +12376,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="AGND1" gate="VR1" x="30.48" y="60.96" rot="R270"/>
 <instance part="SUPPLY1" gate="G$1" x="30.48" y="53.34" rot="R270"/>
 <instance part="SUPPLY2" gate="G$1" x="-68.58" y="154.94"/>
+<instance part="SUPPLY3" gate="G$1" x="-88.9" y="154.94"/>
 </instances>
 <busses>
 </busses>
@@ -13376,11 +13376,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="200.66" y="236.22"/>
 </segment>
 <segment>
-<pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="-88.9" y1="167.64" x2="-88.9" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="GND28" gate="G$1" pin="DGND"/>
-</segment>
-<segment>
 <pinref part="C17" gate="G$1" pin="2"/>
 <pinref part="GND30" gate="G$1" pin="DGND"/>
 <wire x1="-50.8" y1="167.64" x2="-50.8" y2="160.02" width="0.1524" layer="91"/>
@@ -13419,6 +13414,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="C16" gate="G$1" pin="2"/>
 <wire x1="-68.58" y1="167.64" x2="-68.58" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="-88.9" y1="167.64" x2="-88.9" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="SUPPLY3" gate="G$1" pin="DGND"/>
 </segment>
 </net>
 <net name="MGND" class="0">
@@ -13818,54 +13818,8 @@ In this library the device names are the same as the pin names of the symbols, t
 </sheet>
 </sheets>
 <errors>
-<approved hash="102,1,-20.32,264.16,GND,DGND,,,,"/>
-<approved hash="102,1,50.8,231.14,GND,DGND,,,,"/>
-<approved hash="102,1,45.72,228.6,GND,DGND,,,,"/>
-<approved hash="102,1,43.18,226.06,GND,DGND,,,,"/>
-<approved hash="102,1,40.64,223.52,GND,DGND,,,,"/>
-<approved hash="102,1,596.9,193.04,GND,DGND,,,,"/>
-<approved hash="102,1,492.76,190.5,GND,DGND,,,,"/>
-<approved hash="102,1,383.54,187.96,GND,DGND,,,,"/>
-<approved hash="102,1,274.32,190.5,GND,DGND,,,,"/>
-<approved hash="102,1,292.1,287.02,GND,DGND,,,,"/>
-<approved hash="102,1,322.58,134.62,GND,DGND,,,,"/>
-<approved hash="102,1,294.64,134.62,GND,DGND,,,,"/>
-<approved hash="102,1,360.68,137.16,GND,DGND,,,,"/>
-<approved hash="102,1,401.32,289.56,GND,DGND,,,,"/>
-<approved hash="102,1,403.86,284.48,GND,DGND,,,,"/>
-<approved hash="102,1,406.4,279.4,GND,DGND,,,,"/>
-<approved hash="102,1,408.94,274.32,GND,DGND,,,,"/>
 <approved hash="102,1,210.82,236.22,GND,DGND,,,,"/>
-<approved hash="102,1,-50.8,160.02,GND,DGND,,,,"/>
-<approved hash="102,1,-33.02,160.02,GND,DGND,,,,"/>
-<approved hash="102,1,-20.32,160.02,GND,DGND,,,,"/>
-<approved hash="102,1,-7.62,160.02,GND,DGND,,,,"/>
-<approved hash="102,1,5.08,160.02,GND,DGND,,,,"/>
-<approved hash="102,1,17.78,160.02,GND,DGND,,,,"/>
-<approved hash="201,1,17.78,160.02,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,5.08,160.02,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,-7.62,160.02,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,-20.32,160.02,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,-33.02,160.02,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,-50.8,160.02,GND,GND\, DGND,,,,"/>
 <approved hash="201,1,210.82,236.22,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,408.94,274.32,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,406.4,279.4,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,403.86,284.48,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,401.32,289.56,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,360.68,137.16,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,294.64,134.62,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,322.58,134.62,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,292.1,287.02,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,274.32,190.5,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,383.54,187.96,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,492.76,190.5,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,596.9,193.04,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,40.64,223.52,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,43.18,226.06,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,45.72,228.6,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,50.8,231.14,GND,GND\, DGND,,,,"/>
-<approved hash="201,1,-20.32,264.16,GND,GND\, DGND,,,,"/>
 <approved hash="104,1,220.98,25.4,IC2,GND,MGND,,,"/>
 <approved hash="104,1,220.98,22.86,IC2,GND,MGND,,,"/>
 <approved hash="104,1,246.38,50.8,IC2,VSS,3.3V,,,"/>
@@ -13878,7 +13832,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <approved hash="104,1,246.38,25.4,IC2,GND,MGND,,,"/>
 <approved hash="109,1,58.42,226.06,DGND,,,,,"/>
 <approved hash="109,1,58.42,223.52,DGND,,,,,"/>
-<approved hash="113,1,256.777,301.121,JP1,,,,,"/>
 </errors>
 </schematic>
 </drawing>
