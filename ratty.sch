@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7897,11 +7897,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <packages>
 </packages>
 <symbols>
-<symbol name="GND">
-<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
 <symbol name="AGND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <wire x1="-1.0922" y1="-0.508" x2="1.0922" y2="-0.508" width="0.254" layer="94"/>
@@ -7910,19 +7905,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="GND" prefix="GND">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="AGND" prefix="AGND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
@@ -12064,6 +12046,41 @@ http://www.bobstarr.net</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="supply2">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+Please keep in mind, that these devices are necessary for the
+automatic wiring of the supply signals.&lt;p&gt;
+The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="DGND">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<text x="-2.667" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="DGND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DGND" prefix="SUPPLY">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="DGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -12133,42 +12150,32 @@ http://www.bobstarr.net</description>
 <part name="C21" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C22" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C23" library="rcl" deviceset="C-EU" device="C0603" value="2.2nF"/>
-<part name="GND17" library="supply1" deviceset="GND" device=""/>
-<part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="D_SPLITTER" library="splitter" deviceset="SPLITTER" device=""/>
 <part name="A_SPLITTER" library="splitter" deviceset="SPLITTER" device=""/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="AGND1" library="supply1" deviceset="AGND" device=""/>
-<part name="GND18" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND5" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="GND5" library="supply2" deviceset="DGND" device=""/>
 <part name="C24" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
-<part name="GND19" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND20" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND21" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND22" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="GND19" library="supply2" deviceset="DGND" device=""/>
+<part name="GND20" library="supply2" deviceset="DGND" device=""/>
+<part name="GND21" library="supply2" deviceset="DGND" device=""/>
+<part name="GND22" library="supply2" deviceset="DGND" device=""/>
 <part name="AGND3" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND4" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND5" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND6" library="supply1" deviceset="AGND" device=""/>
 <part name="M_SPLITTER" library="splitter" deviceset="SPLITTER" device=""/>
-<part name="GND4" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND6" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND7" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND8" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND9" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND10" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND11" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND12" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND13" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND14" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="GND4" library="supply2" deviceset="DGND" device=""/>
+<part name="GND6" library="supply2" deviceset="DGND" device=""/>
+<part name="GND7" library="supply2" deviceset="DGND" device=""/>
+<part name="GND8" library="supply2" deviceset="DGND" device=""/>
+<part name="GND11" library="supply2" deviceset="DGND" device=""/>
+<part name="GND12" library="supply2" deviceset="DGND" device=""/>
+<part name="GND13" library="supply2" deviceset="DGND" device=""/>
+<part name="GND14" library="supply2" deviceset="DGND" device=""/>
 <part name="R8" library="rcl" deviceset="R-US_" device="R0603" value="100"/>
-<part name="SPLIT_GYRO_VDD" library="splitter" deviceset="SPLITTER" device=""/>
-<part name="SPLIT_GYRO_LOGIC" library="splitter" deviceset="SPLITTER" device=""/>
-<part name="JP1" library="pinhead" deviceset="PINHD-1X5" device=""/>
+<part name="JP1" library="pinhead" deviceset="PINHD-1X5" device="" value="ConnectorPins"/>
 <part name="C26" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
-<part name="SPLIT_VSS_CAP" library="splitter" deviceset="SPLITTER" device=""/>
 <part name="U$17" library="LEDs" deviceset="LED-TRICOLOR" device=""/>
-<part name="GND15" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="R9" library="rcl" deviceset="R-US_" device="R0603" value="120"/>
 <part name="R16" library="rcl" deviceset="R-US_" device="R0603" value="120"/>
 <part name="R17" library="rcl" deviceset="R-US_" device="R0603" value="120"/>
@@ -12176,7 +12183,7 @@ http://www.bobstarr.net</description>
 <part name="R20" library="resistor" deviceset="R-US_" device="R0603" value="100"/>
 <part name="R21" library="resistor" deviceset="R-US_" device="R0603" value="10K"/>
 <part name="C27" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
-<part name="GND24" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="GND24" library="supply2" deviceset="DGND" device=""/>
 <part name="R18" library="rcl" deviceset="R-US_" device="R0603" value="100"/>
 <part name="R19" library="rcl" deviceset="R-US_" device="R0603" value="100"/>
 <part name="R22" library="rcl" deviceset="R-US_" device="R0603" value="100"/>
@@ -12186,9 +12193,9 @@ http://www.bobstarr.net</description>
 <part name="C25" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C28" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C29" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
-<part name="GND23" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND25" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND26" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="GND23" library="supply2" deviceset="DGND" device=""/>
+<part name="GND25" library="supply2" deviceset="DGND" device=""/>
+<part name="GND26" library="supply2" deviceset="DGND" device=""/>
 <part name="R26" library="rcl" deviceset="R-US_" device="R0603" value="20K"/>
 <part name="R27" library="rcl" deviceset="R-US_" device="R0603" value="20K"/>
 <part name="R28" library="rcl" deviceset="R-US_" device="R0603" value="10K"/>
@@ -12197,21 +12204,25 @@ http://www.bobstarr.net</description>
 <part name="AGND8" library="supply1" deviceset="AGND" device=""/>
 <part name="GND27" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
 <part name="S1" library="switch-ck" deviceset="L101-XX-X-MS" device=""/>
-<part name="U$7" library="splitter" deviceset="SPLITTER" device=""/>
-<part name="U$22" library="splitter" deviceset="SPLITTER" device=""/>
 <part name="AGND9" library="supply1" deviceset="AGND" device=""/>
-<part name="GND28" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND29" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND30" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND31" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="GND28" library="supply2" deviceset="DGND" device=""/>
+<part name="GND30" library="supply2" deviceset="DGND" device=""/>
+<part name="GND31" library="supply2" deviceset="DGND" device=""/>
 <part name="C30" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
-<part name="GND32" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
-<part name="GND33" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="GND32" library="supply2" deviceset="DGND" device=""/>
+<part name="GND33" library="supply2" deviceset="DGND" device=""/>
 <part name="C31" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
-<part name="GND34" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="GND34" library="supply2" deviceset="DGND" device=""/>
 <part name="C32" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
-<part name="GND35" library="SparkFun-Aesthetics" deviceset="DGND" device=""/>
+<part name="GND35" library="supply2" deviceset="DGND" device=""/>
 <part name="C33" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
+<part name="AGND2" library="supply1" deviceset="AGND" device=""/>
+<part name="AGND10" library="supply1" deviceset="AGND" device=""/>
+<part name="AGND11" library="supply1" deviceset="AGND" device=""/>
+<part name="AGND12" library="supply1" deviceset="AGND" device=""/>
+<part name="AGND1" library="supply1" deviceset="AGND" device=""/>
+<part name="SUPPLY1" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY2" library="supply2" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12271,7 +12282,7 @@ http://www.bobstarr.net</description>
 <instance part="U$8" gate="G$1" x="363.22" y="7.62"/>
 <instance part="U1" gate="G$1" x="231.14" y="152.4"/>
 <instance part="IC2" gate="G$1" x="233.68" y="35.56"/>
-<instance part="U$4" gate="G$1" x="132.08" y="276.86"/>
+<instance part="U$4" gate="G$1" x="129.54" y="276.86"/>
 <instance part="C10" gate="G$1" x="-101.6" y="228.6"/>
 <instance part="C11" gate="G$1" x="-88.9" y="172.72"/>
 <instance part="C16" gate="G$1" x="-68.58" y="172.72"/>
@@ -12280,17 +12291,13 @@ http://www.bobstarr.net</description>
 <instance part="C19" gate="G$1" x="-20.32" y="172.72"/>
 <instance part="R2" gate="G$1" x="5.08" y="294.64"/>
 <instance part="RESETBUTTON" gate="G$1" x="-20.32" y="281.94" rot="R180"/>
-<instance part="C20" gate="G$1" x="307.34" y="142.24"/>
+<instance part="C20" gate="G$1" x="292.1" y="299.72"/>
 <instance part="C21" gate="G$1" x="322.58" y="147.32"/>
-<instance part="C22" gate="G$1" x="340.36" y="147.32"/>
+<instance part="C22" gate="G$1" x="294.64" y="147.32"/>
 <instance part="C23" gate="G$1" x="360.68" y="149.86"/>
-<instance part="GND17" gate="1" x="254" y="147.32" rot="R90"/>
-<instance part="GND16" gate="1" x="261.62" y="149.86" rot="R90"/>
 <instance part="D_SPLITTER" gate="G$1" x="43.18" y="53.34" rot="R180"/>
 <instance part="A_SPLITTER" gate="G$1" x="43.18" y="60.96" rot="R180"/>
 <instance part="GND1" gate="1" x="50.8" y="43.18"/>
-<instance part="AGND1" gate="VR1" x="35.56" y="60.96" rot="R270"/>
-<instance part="GND18" gate="G$1" x="35.56" y="53.34" rot="R270"/>
 <instance part="GND5" gate="G$1" x="-20.32" y="261.62"/>
 <instance part="C24" gate="G$1" x="-5.08" y="279.4" rot="R180"/>
 <instance part="GND19" gate="G$1" x="48.26" y="231.14" rot="R270"/>
@@ -12306,20 +12313,14 @@ http://www.bobstarr.net</description>
 <instance part="GND6" gate="G$1" x="492.76" y="187.96"/>
 <instance part="GND7" gate="G$1" x="383.54" y="185.42"/>
 <instance part="GND8" gate="G$1" x="274.32" y="187.96"/>
-<instance part="GND9" gate="G$1" x="195.58" y="147.32" rot="R270"/>
-<instance part="GND10" gate="G$1" x="208.28" y="137.16"/>
-<instance part="GND11" gate="G$1" x="307.34" y="127"/>
+<instance part="GND11" gate="G$1" x="292.1" y="284.48"/>
 <instance part="GND12" gate="G$1" x="322.58" y="132.08"/>
-<instance part="GND13" gate="G$1" x="340.36" y="132.08"/>
+<instance part="GND13" gate="G$1" x="294.64" y="132.08"/>
 <instance part="GND14" gate="G$1" x="360.68" y="134.62"/>
 <instance part="R8" gate="G$1" x="-12.7" y="294.64"/>
-<instance part="SPLIT_GYRO_VDD" gate="G$1" x="350.52" y="167.64" rot="R90"/>
-<instance part="SPLIT_GYRO_LOGIC" gate="G$1" x="294.64" y="160.02" rot="R90"/>
 <instance part="JP1" gate="A" x="259.08" y="299.72"/>
 <instance part="C26" gate="G$1" x="213.36" y="223.52" rot="R90"/>
-<instance part="SPLIT_VSS_CAP" gate="G$1" x="55.88" y="220.98" rot="R270"/>
 <instance part="U$17" gate="G$1" x="144.78" y="193.04"/>
-<instance part="GND15" gate="G$1" x="177.8" y="190.5" rot="R90"/>
 <instance part="R9" gate="G$1" x="114.3" y="193.04" smashed="yes">
 <attribute name="NAME" x="113.03" y="197.0786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="120.65" y="192.278" size="1.778" layer="96"/>
@@ -12357,11 +12358,8 @@ http://www.bobstarr.net</description>
 <instance part="AGND8" gate="VR1" x="99.06" y="93.98" rot="R90"/>
 <instance part="GND27" gate="G$1" x="213.36" y="236.22" rot="R90"/>
 <instance part="S1" gate="G$1" x="43.18" y="114.3" rot="R90"/>
-<instance part="U$7" gate="G$1" x="-99.06" y="220.98"/>
-<instance part="U$22" gate="G$1" x="-88.9" y="233.68" rot="R180"/>
 <instance part="AGND9" gate="VR1" x="-93.98" y="213.36"/>
 <instance part="GND28" gate="G$1" x="-88.9" y="157.48"/>
-<instance part="GND29" gate="G$1" x="-68.58" y="157.48"/>
 <instance part="GND30" gate="G$1" x="-50.8" y="157.48"/>
 <instance part="GND31" gate="G$1" x="-33.02" y="157.48"/>
 <instance part="C30" gate="G$1" x="-7.62" y="172.72"/>
@@ -12372,6 +12370,13 @@ http://www.bobstarr.net</description>
 <instance part="C32" gate="G$1" x="17.78" y="172.72"/>
 <instance part="GND35" gate="G$1" x="17.78" y="157.48"/>
 <instance part="C33" gate="G$1" x="-88.9" y="228.6"/>
+<instance part="AGND2" gate="VR1" x="193.04" y="139.7" rot="R270"/>
+<instance part="AGND10" gate="VR1" x="208.28" y="132.08"/>
+<instance part="AGND11" gate="VR1" x="271.78" y="149.86" rot="R90"/>
+<instance part="AGND12" gate="VR1" x="274.32" y="147.32" rot="R90"/>
+<instance part="AGND1" gate="VR1" x="30.48" y="60.96" rot="R270"/>
+<instance part="SUPPLY1" gate="G$1" x="30.48" y="53.34" rot="R270"/>
+<instance part="SUPPLY2" gate="G$1" x="-68.58" y="154.94"/>
 </instances>
 <busses>
 </busses>
@@ -12419,16 +12424,6 @@ http://www.bobstarr.net</description>
 <wire x1="233.68" y1="76.2" x2="233.68" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="AD0"/>
-<wire x1="246.38" y1="147.32" x2="251.46" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="GND17" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="INT"/>
-<wire x1="246.38" y1="149.86" x2="259.08" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="GND16" gate="1" pin="GND"/>
-</segment>
-<segment>
 <wire x1="50.8" y1="45.72" x2="50.8" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="-"/>
 <wire x1="50.8" y1="53.34" x2="50.8" y2="60.96" width="0.1524" layer="91"/>
@@ -12442,10 +12437,6 @@ http://www.bobstarr.net</description>
 <junction x="50.8" y="53.34"/>
 <pinref part="M_SPLITTER" gate="G$1" pin="1"/>
 <junction x="50.8" y="71.12"/>
-</segment>
-<segment>
-<pinref part="GND18" gate="G$1" pin="GND"/>
-<pinref part="D_SPLITTER" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -12540,11 +12531,6 @@ http://www.bobstarr.net</description>
 <label x="596.9" y="276.86" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SPLIT_GYRO_VDD" gate="G$1" pin="2"/>
-<wire x1="350.52" y1="172.72" x2="350.52" y2="175.26" width="0.1524" layer="91"/>
-<label x="350.52" y="175.26" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U$8" gate="G$1" pin="L_VCC"/>
 <wire x1="325.12" y1="-5.08" x2="325.12" y2="-15.24" width="0.1524" layer="91"/>
 <label x="325.12" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
@@ -12599,7 +12585,7 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA9-TIM1_CH2/I2C3_SMBA/USART1_TX/SDIO_D2"/>
-<wire x1="203.2" y1="307.34" x2="210.82" y2="307.34" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="307.34" x2="210.82" y2="307.34" width="0.1524" layer="91"/>
 <label x="210.82" y="307.34" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
@@ -12611,7 +12597,7 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA8-MCO_1/TIM1_CH1/I2C3_SCL/USART1_CK/SDIO_D1"/>
-<wire x1="203.2" y1="309.88" x2="210.82" y2="309.88" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="309.88" x2="210.82" y2="309.88" width="0.1524" layer="91"/>
 <label x="210.82" y="309.88" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
@@ -12623,7 +12609,7 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA10-TIM1_CH3/SPI5_MOSI/USART1_RX/USB_FS_ID"/>
-<wire x1="203.2" y1="304.8" x2="210.82" y2="304.8" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="304.8" x2="210.82" y2="304.8" width="0.1524" layer="91"/>
 <label x="210.82" y="304.8" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
@@ -12635,7 +12621,7 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA11-TIM1_CH4/SPI4_MISO/USART1_CTS/USB_FS_DM"/>
-<wire x1="203.2" y1="302.26" x2="210.82" y2="302.26" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="302.26" x2="210.82" y2="302.26" width="0.1524" layer="91"/>
 <label x="210.82" y="302.26" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
@@ -12758,15 +12744,18 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <label x="-93.98" y="238.76" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="U$22" gate="G$1" pin="2"/>
-<wire x1="-93.98" y1="233.68" x2="-93.98" y2="238.76" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="-93.98" y1="236.22" x2="-93.98" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="-101.6" y1="231.14" x2="-93.98" y2="231.14" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="231.14" x2="-93.98" y2="233.68" width="0.1524" layer="91"/>
-<junction x="-93.98" y="233.68"/>
+<wire x1="-93.98" y1="231.14" x2="-93.98" y2="236.22" width="0.1524" layer="91"/>
 <pinref part="C33" gate="G$1" pin="1"/>
 <wire x1="-93.98" y1="231.14" x2="-88.9" y2="231.14" width="0.1524" layer="91"/>
 <junction x="-93.98" y="231.14"/>
+<wire x1="-93.98" y1="236.22" x2="17.78" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="236.22" x2="17.78" y2="307.34" width="0.1524" layer="91"/>
+<junction x="-93.98" y="236.22"/>
+<pinref part="U$4" gate="G$1" pin="VDDA/VREF+"/>
+<wire x1="58.42" y1="307.34" x2="17.78" y2="307.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C11" gate="G$1" pin="1"/>
@@ -12818,24 +12807,47 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="VBAT"/>
-<wire x1="60.96" y1="330.2" x2="53.34" y2="330.2" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="330.2" x2="53.34" y2="330.2" width="0.1524" layer="91"/>
 <label x="53.34" y="330.2" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="60.96" y1="317.5" x2="53.34" y2="317.5" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="317.5" x2="53.34" y2="317.5" width="0.1524" layer="91"/>
 <label x="53.34" y="317.5" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="VDD@1"/>
 </segment>
 <segment>
-<wire x1="60.96" y1="314.96" x2="53.34" y2="314.96" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="314.96" x2="53.34" y2="314.96" width="0.1524" layer="91"/>
 <label x="53.34" y="314.96" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="VDD@2"/>
 </segment>
 <segment>
-<wire x1="60.96" y1="312.42" x2="53.34" y2="312.42" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="312.42" x2="53.34" y2="312.42" width="0.1524" layer="91"/>
 <label x="53.34" y="312.42" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="VDD@3"/>
 </segment>
 <segment>
-<wire x1="60.96" y1="309.88" x2="53.34" y2="309.88" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="309.88" x2="53.34" y2="309.88" width="0.1524" layer="91"/>
 <label x="53.34" y="309.88" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="VDD@4"/>
+</segment>
+<segment>
+<pinref part="C22" gate="G$1" pin="1"/>
+<wire x1="294.64" y1="149.86" x2="294.64" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="157.48" x2="304.8" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="157.48" x2="304.8" y2="165.1" width="0.1524" layer="91"/>
+<label x="304.8" y="165.1" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="VDD"/>
+<wire x1="218.44" y1="160.02" x2="205.74" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="160.02" x2="205.74" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="175.26" x2="287.02" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="175.26" x2="287.02" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="157.48" x2="294.64" y2="157.48" width="0.1524" layer="91"/>
+<junction x="294.64" y="157.48"/>
+</segment>
+<segment>
+<pinref part="U$17" gate="G$1" pin="A"/>
+<wire x1="157.48" y1="190.5" x2="175.26" y2="190.5" width="0.1524" layer="91"/>
+<label x="175.26" y="190.5" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="TO_C5_CAP" class="0">
@@ -12858,15 +12870,11 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB1-TIM1_CH3N/TIM3_CH4/SPI5_NSS"/>
-<wire x1="203.2" y1="281.94" x2="213.36" y2="281.94" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="281.94" x2="213.36" y2="281.94" width="0.1524" layer="91"/>
 <label x="213.36" y="281.94" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="AGND" class="0">
-<segment>
-<pinref part="A_SPLITTER" gate="G$1" pin="2"/>
-<pinref part="AGND1" gate="VR1" pin="AGND"/>
-</segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="457.2" y1="119.38" x2="457.2" y2="111.76" width="0.1524" layer="91"/>
@@ -12898,16 +12906,47 @@ http://www.bobstarr.net</description>
 <wire x1="96.52" y1="93.98" x2="93.98" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$7" gate="G$1" pin="2"/>
-<wire x1="-93.98" y1="220.98" x2="-93.98" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="223.52" x2="-93.98" y2="220.98" width="0.1524" layer="91"/>
 <pinref part="AGND9" gate="VR1" pin="AGND"/>
 <pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="-93.98" y1="220.98" x2="-93.98" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="-101.6" y1="223.52" x2="-93.98" y2="223.52" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="223.52" x2="-93.98" y2="220.98" width="0.1524" layer="91"/>
-<junction x="-93.98" y="220.98"/>
 <pinref part="C33" gate="G$1" pin="2"/>
 <wire x1="-93.98" y1="223.52" x2="-88.9" y2="223.52" width="0.1524" layer="91"/>
 <junction x="-93.98" y="223.52"/>
+<wire x1="-93.98" y1="220.98" x2="25.4" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="220.98" x2="25.4" y2="233.68" width="0.1524" layer="91"/>
+<junction x="-93.98" y="220.98"/>
+<pinref part="U$4" gate="G$1" pin="VSSA/VREF-"/>
+<wire x1="25.4" y1="233.68" x2="58.42" y2="233.68" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="RESV-G"/>
+<wire x1="218.44" y1="147.32" x2="198.12" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="147.32" x2="198.12" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="AGND2" gate="VR1" pin="AGND"/>
+<wire x1="198.12" y1="139.7" x2="195.58" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<pinref part="AGND10" gate="VR1" pin="AGND"/>
+<wire x1="218.44" y1="144.78" x2="208.28" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="144.78" x2="208.28" y2="134.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="INT"/>
+<pinref part="AGND11" gate="VR1" pin="AGND"/>
+<wire x1="246.38" y1="149.86" x2="269.24" y2="149.86" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="AGND12" gate="VR1" pin="AGND"/>
+<pinref part="U1" gate="G$1" pin="AD0"/>
+<wire x1="271.78" y1="147.32" x2="246.38" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="A_SPLITTER" gate="G$1" pin="2"/>
+<wire x1="38.1" y1="60.96" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="AGND1" gate="VR1" pin="AGND"/>
 </segment>
 </net>
 <net name="PC_10_EMIT_CIRCUIT_1" class="0">
@@ -12921,8 +12960,9 @@ http://www.bobstarr.net</description>
 <label x="243.84" y="213.36" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="60.96" y1="246.38" x2="53.34" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="246.38" x2="53.34" y2="246.38" width="0.1524" layer="91"/>
 <label x="53.34" y="246.38" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PC10-SPI3_SCK/I2S3_CK/SDIO_D2"/>
 </segment>
 </net>
 <net name="PC_11_EMIT_CIRCUIT_2" class="0">
@@ -12936,8 +12976,9 @@ http://www.bobstarr.net</description>
 <label x="353.06" y="213.36" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="60.96" y1="243.84" x2="53.34" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="243.84" x2="53.34" y2="243.84" width="0.1524" layer="91"/>
 <label x="53.34" y="243.84" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PC11-I2S3EXT_SD/SPI3_MISO/SDIO_D3"/>
 </segment>
 </net>
 <net name="LED/R5" class="0">
@@ -12998,8 +13039,9 @@ http://www.bobstarr.net</description>
 </net>
 <net name="PA_0_ENCODER1_1" class="0">
 <segment>
-<wire x1="203.2" y1="330.2" x2="213.36" y2="330.2" width="0.1524" layer="91"/>
 <label x="213.36" y="330.2" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PA0-TIM2_CH1/TIM2_ET/TIM5_CH1"/>
+<wire x1="200.66" y1="330.2" x2="213.36" y2="330.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="L_CHA"/>
@@ -13009,8 +13051,9 @@ http://www.bobstarr.net</description>
 </net>
 <net name="PA_1_ENCODER1_2" class="0">
 <segment>
-<wire x1="203.2" y1="327.66" x2="213.36" y2="327.66" width="0.1524" layer="91"/>
-<label x="213.36" y="327.66" size="1.778" layer="95" xref="yes"/>
+<wire x1="200.66" y1="327.66" x2="218.44" y2="327.66" width="0.1524" layer="91"/>
+<label x="218.44" y="327.66" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PA1-TIM2_CH2/TIM5_CH2/SPI4_MOSI/I2S4_SD"/>
 </segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="L_CHB"/>
@@ -13029,14 +13072,15 @@ http://www.bobstarr.net</description>
 <label x="492.76" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="203.2" y1="314.96" x2="213.36" y2="314.96" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="314.96" x2="213.36" y2="314.96" width="0.1524" layer="91"/>
 <label x="213.36" y="314.96" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PA6-TIM1_BKIN/TIM3_CH1/SPI1_MISO/SDIO_CMD"/>
 </segment>
 </net>
 <net name="NRST_CIRCUIT_MCU" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="NRST"/>
-<wire x1="60.96" y1="327.66" x2="53.34" y2="327.66" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="327.66" x2="53.34" y2="327.66" width="0.1524" layer="91"/>
 <label x="53.34" y="327.66" size="1.778" layer="95" rot="R180" xref="yes"/>
 <label x="53.34" y="327.66" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -13050,48 +13094,23 @@ http://www.bobstarr.net</description>
 <junction x="-20.32" y="294.64"/>
 </segment>
 </net>
-<net name="GYROVDD" class="0">
+<net name="GYROVLOGIC" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="VDD"/>
-<wire x1="218.44" y1="160.02" x2="210.82" y2="160.02" width="0.1524" layer="91"/>
-<label x="210.82" y="160.02" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="C20" gate="G$1" pin="1"/>
+<wire x1="292.1" y1="302.26" x2="292.1" y2="309.88" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="309.88" x2="279.4" y2="309.88" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="309.88" x2="299.72" y2="309.88" width="0.1524" layer="91"/>
+<junction x="292.1" y="309.88"/>
+<wire x1="299.72" y1="309.88" x2="299.72" y2="312.42" width="0.1524" layer="91"/>
+<label x="299.72" y="312.42" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PA4-SPI1_NSS/I2S1_WS/SPI3_NSS/USART2_CK"/>
+<wire x1="200.66" y1="320.04" x2="279.4" y2="320.04" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="320.04" x2="279.4" y2="309.88" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="C22" gate="G$1" pin="1"/>
-<wire x1="340.36" y1="149.86" x2="340.36" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="340.36" y1="157.48" x2="335.28" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="335.28" y1="157.48" x2="335.28" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="340.36" y1="157.48" x2="350.52" y2="157.48" width="0.1524" layer="91"/>
-<junction x="340.36" y="157.48"/>
-<wire x1="350.52" y1="157.48" x2="350.52" y2="160.02" width="0.1524" layer="91"/>
-<label x="335.28" y="160.02" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="SPLIT_GYRO_VDD" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="GRYOVLOGIC" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="VLOGIC"/>
 <wire x1="218.44" y1="154.94" x2="210.82" y2="154.94" width="0.1524" layer="91"/>
 <label x="210.82" y="154.94" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="GRYOREGOUT" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="REGOUT"/>
-<wire x1="218.44" y1="152.4" x2="213.36" y2="152.4" width="0.1524" layer="91"/>
-<label x="213.36" y="152.4" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="GYROVLOGIC" class="0">
-<segment>
-<pinref part="C20" gate="G$1" pin="1"/>
-<wire x1="307.34" y1="144.78" x2="307.34" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="307.34" y1="152.4" x2="294.64" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="307.34" y1="152.4" x2="314.96" y2="152.4" width="0.1524" layer="91"/>
-<junction x="307.34" y="152.4"/>
-<wire x1="314.96" y1="152.4" x2="314.96" y2="154.94" width="0.1524" layer="91"/>
-<label x="314.96" y="154.94" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="SPLIT_GYRO_LOGIC" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="GYROREGOUT" class="0">
@@ -13099,6 +13118,11 @@ http://www.bobstarr.net</description>
 <pinref part="C21" gate="G$1" pin="1"/>
 <wire x1="322.58" y1="149.86" x2="322.58" y2="157.48" width="0.1524" layer="91"/>
 <label x="322.58" y="157.48" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="REGOUT"/>
+<wire x1="218.44" y1="152.4" x2="213.36" y2="152.4" width="0.1524" layer="91"/>
+<label x="213.36" y="152.4" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GYROCPOUT" class="0">
@@ -13116,7 +13140,7 @@ http://www.bobstarr.net</description>
 <net name="PB8_I2C1SCL_FOR_GYRO" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB8-TIM4_CH3/TIM10_CH1/I2C1_SCL/SPI5_MOSI/I2C3_SDA"/>
-<wire x1="203.2" y1="264.16" x2="205.74" y2="264.16" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="264.16" x2="205.74" y2="264.16" width="0.1524" layer="91"/>
 <label x="205.74" y="264.16" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13136,14 +13160,15 @@ http://www.bobstarr.net</description>
 <label x="462.28" y="213.36" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="203.2" y1="284.48" x2="213.36" y2="284.48" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="284.48" x2="213.36" y2="284.48" width="0.1524" layer="91"/>
 <label x="213.36" y="284.48" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="PB0-TIM1_CH2N/TIM3_CH3/SPI5_SCK"/>
 </segment>
 </net>
 <net name="PB7_I2CSDA_FOR_GYRO" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB7-TIM4_CH2/I2C1_SDA/USART1_RX/SDIO_D0"/>
-<wire x1="203.2" y1="266.7" x2="208.28" y2="266.7" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="266.7" x2="208.28" y2="266.7" width="0.1524" layer="91"/>
 <label x="208.28" y="266.7" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13155,7 +13180,7 @@ http://www.bobstarr.net</description>
 <net name="PB9_GYROCLK" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB9-TIM4_CH4/TIM11_CH11/I2C1_SDA/SPI2_NSS/I2C2_SDA"/>
-<wire x1="203.2" y1="261.62" x2="208.28" y2="261.62" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="261.62" x2="208.28" y2="261.62" width="0.1524" layer="91"/>
 <label x="208.28" y="261.62" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13166,23 +13191,30 @@ http://www.bobstarr.net</description>
 </net>
 <net name="DGND" class="0">
 <segment>
-<pinref part="GND21" gate="G$1" pin="GND"/>
-<wire x1="60.96" y1="226.06" x2="43.18" y2="226.06" width="0.1524" layer="91"/>
+<pinref part="GND21" gate="G$1" pin="DGND"/>
+<wire x1="58.42" y1="226.06" x2="43.18" y2="226.06" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="VSS@3"/>
 </segment>
 <segment>
-<wire x1="60.96" y1="231.14" x2="50.8" y2="231.14" width="0.1524" layer="91"/>
-<pinref part="GND19" gate="G$1" pin="GND"/>
+<wire x1="58.42" y1="231.14" x2="50.8" y2="231.14" width="0.1524" layer="91"/>
+<pinref part="GND19" gate="G$1" pin="DGND"/>
+<pinref part="U$4" gate="G$1" pin="VSS@1"/>
 </segment>
 <segment>
-<pinref part="GND20" gate="G$1" pin="GND"/>
-<wire x1="60.96" y1="228.6" x2="55.88" y2="228.6" width="0.1524" layer="91"/>
-<pinref part="SPLIT_VSS_CAP" gate="G$1" pin="1"/>
-<wire x1="55.88" y1="228.6" x2="45.72" y2="228.6" width="0.1524" layer="91"/>
-<junction x="55.88" y="228.6"/>
+<pinref part="GND20" gate="G$1" pin="DGND"/>
+<wire x1="58.42" y1="228.6" x2="45.72" y2="228.6" width="0.1524" layer="91"/>
+<pinref part="C26" gate="G$1" pin="2"/>
+<wire x1="218.44" y1="223.52" x2="226.06" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="223.52" x2="226.06" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="215.9" x2="58.42" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="215.9" x2="58.42" y2="228.6" width="0.1524" layer="91"/>
+<junction x="58.42" y="228.6"/>
+<pinref part="U$4" gate="G$1" pin="VSS@2"/>
 </segment>
 <segment>
-<pinref part="GND22" gate="G$1" pin="GND"/>
-<wire x1="60.96" y1="223.52" x2="40.64" y2="223.52" width="0.1524" layer="91"/>
+<pinref part="GND22" gate="G$1" pin="DGND"/>
+<wire x1="58.42" y1="223.52" x2="40.64" y2="223.52" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="VSS@4"/>
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
@@ -13201,7 +13233,7 @@ http://www.bobstarr.net</description>
 <wire x1="312.42" y1="208.28" x2="304.8" y2="208.28" width="0.1524" layer="91"/>
 <junction x="304.8" y="208.28"/>
 <wire x1="274.32" y1="193.04" x2="274.32" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="GND8" gate="G$1" pin="GND"/>
+<pinref part="GND8" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="1"/>
@@ -13220,7 +13252,7 @@ http://www.bobstarr.net</description>
 <wire x1="421.64" y1="208.28" x2="414.02" y2="208.28" width="0.1524" layer="91"/>
 <junction x="414.02" y="208.28"/>
 <wire x1="383.54" y1="193.04" x2="383.54" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="GND7" gate="G$1" pin="GND"/>
+<pinref part="GND7" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="R13" gate="G$1" pin="1"/>
@@ -13239,7 +13271,7 @@ http://www.bobstarr.net</description>
 <wire x1="530.86" y1="208.28" x2="523.24" y2="208.28" width="0.1524" layer="91"/>
 <junction x="523.24" y="208.28"/>
 <wire x1="492.76" y1="193.04" x2="492.76" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="GND6" gate="G$1" pin="GND"/>
+<pinref part="GND6" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
@@ -13258,41 +13290,30 @@ http://www.bobstarr.net</description>
 <wire x1="635" y1="210.82" x2="627.38" y2="210.82" width="0.1524" layer="91"/>
 <junction x="627.38" y="210.82"/>
 <wire x1="596.9" y1="195.58" x2="596.9" y2="193.04" width="0.1524" layer="91"/>
-<pinref part="GND4" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="RESV-G"/>
-<wire x1="218.44" y1="147.32" x2="198.12" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="GND9" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="218.44" y1="144.78" x2="208.28" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="144.78" x2="208.28" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="GND10" gate="G$1" pin="GND"/>
+<pinref part="GND4" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="C20" gate="G$1" pin="2"/>
-<wire x1="307.34" y1="137.16" x2="307.34" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="GND11" gate="G$1" pin="GND"/>
+<wire x1="292.1" y1="294.64" x2="292.1" y2="287.02" width="0.1524" layer="91"/>
+<pinref part="GND11" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="C21" gate="G$1" pin="2"/>
 <wire x1="322.58" y1="142.24" x2="322.58" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="GND12" gate="G$1" pin="GND"/>
+<pinref part="GND12" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="C22" gate="G$1" pin="2"/>
-<wire x1="340.36" y1="142.24" x2="340.36" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="GND13" gate="G$1" pin="GND"/>
+<wire x1="294.64" y1="142.24" x2="294.64" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="GND13" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="C23" gate="G$1" pin="2"/>
 <wire x1="360.68" y1="144.78" x2="360.68" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="GND14" gate="G$1" pin="GND"/>
+<pinref part="GND14" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="GND5" gate="G$1" pin="GND"/>
+<pinref part="GND5" gate="G$1" pin="DGND"/>
 <pinref part="RESETBUTTON" gate="G$1" pin="3"/>
 <wire x1="-20.32" y1="276.86" x2="-20.32" y2="279.4" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="264.16" x2="-20.32" y2="266.7" width="0.1524" layer="91"/>
@@ -13309,11 +13330,6 @@ http://www.bobstarr.net</description>
 <label x="246.38" y="299.72" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$17" gate="G$1" pin="A"/>
-<wire x1="157.48" y1="190.5" x2="175.26" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="GND15" gate="G$1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="S2" gate="G$1" pin="5"/>
 <wire x1="401.32" y1="304.8" x2="401.32" y2="292.1" width="0.1524" layer="91"/>
 <wire x1="401.32" y1="292.1" x2="421.64" y2="292.1" width="0.1524" layer="91"/>
@@ -13321,7 +13337,7 @@ http://www.bobstarr.net</description>
 <wire x1="421.64" y1="292.1" x2="421.64" y2="309.88" width="0.1524" layer="91"/>
 <wire x1="401.32" y1="292.1" x2="401.32" y2="289.56" width="0.1524" layer="91"/>
 <junction x="401.32" y="292.1"/>
-<pinref part="GND24" gate="G$1" pin="GND"/>
+<pinref part="GND24" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="S2" gate="G$1" pin="6"/>
@@ -13331,7 +13347,7 @@ http://www.bobstarr.net</description>
 <wire x1="436.88" y1="294.64" x2="403.86" y2="294.64" width="0.1524" layer="91"/>
 <wire x1="403.86" y1="294.64" x2="403.86" y2="284.48" width="0.1524" layer="91"/>
 <junction x="403.86" y="294.64"/>
-<pinref part="GND23" gate="G$1" pin="GND"/>
+<pinref part="GND23" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="S2" gate="G$1" pin="7"/>
@@ -13341,7 +13357,7 @@ http://www.bobstarr.net</description>
 <wire x1="454.66" y1="299.72" x2="406.4" y2="299.72" width="0.1524" layer="91"/>
 <wire x1="406.4" y1="299.72" x2="406.4" y2="279.4" width="0.1524" layer="91"/>
 <junction x="406.4" y="299.72"/>
-<pinref part="GND25" gate="G$1" pin="GND"/>
+<pinref part="GND25" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="S2" gate="G$1" pin="8"/>
@@ -13351,51 +13367,58 @@ http://www.bobstarr.net</description>
 <wire x1="472.44" y1="302.26" x2="408.94" y2="302.26" width="0.1524" layer="91"/>
 <wire x1="408.94" y1="302.26" x2="408.94" y2="274.32" width="0.1524" layer="91"/>
 <junction x="408.94" y="302.26"/>
-<pinref part="GND26" gate="G$1" pin="GND"/>
+<pinref part="GND26" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<wire x1="200.66" y1="236.22" x2="210.82" y2="236.22" width="0.1524" layer="91"/>
 <pinref part="GND27" gate="G$1" pin="GND"/>
+<pinref part="U$4" gate="G$1" pin="BOOT0"/>
+<wire x1="200.66" y1="236.22" x2="210.82" y2="236.22" width="0.1524" layer="91"/>
+<junction x="200.66" y="236.22"/>
 </segment>
 <segment>
 <pinref part="C11" gate="G$1" pin="2"/>
 <wire x1="-88.9" y1="167.64" x2="-88.9" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="GND28" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="C16" gate="G$1" pin="2"/>
-<wire x1="-68.58" y1="167.64" x2="-68.58" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="GND29" gate="G$1" pin="GND"/>
+<pinref part="GND28" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="2"/>
-<pinref part="GND30" gate="G$1" pin="GND"/>
+<pinref part="GND30" gate="G$1" pin="DGND"/>
 <wire x1="-50.8" y1="167.64" x2="-50.8" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C18" gate="G$1" pin="2"/>
-<pinref part="GND31" gate="G$1" pin="GND"/>
+<pinref part="GND31" gate="G$1" pin="DGND"/>
 <wire x1="-33.02" y1="167.64" x2="-33.02" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C19" gate="G$1" pin="2"/>
 <wire x1="-20.32" y1="167.64" x2="-20.32" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="GND32" gate="G$1" pin="GND"/>
+<pinref part="GND32" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="C30" gate="G$1" pin="2"/>
 <wire x1="-7.62" y1="167.64" x2="-7.62" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="GND33" gate="G$1" pin="GND"/>
+<pinref part="GND33" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="C31" gate="G$1" pin="2"/>
 <wire x1="5.08" y1="167.64" x2="5.08" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="GND34" gate="G$1" pin="GND"/>
+<pinref part="GND34" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="C32" gate="G$1" pin="2"/>
-<pinref part="GND35" gate="G$1" pin="GND"/>
+<pinref part="GND35" gate="G$1" pin="DGND"/>
 <wire x1="17.78" y1="160.02" x2="17.78" y2="167.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D_SPLITTER" gate="G$1" pin="2"/>
+<wire x1="38.1" y1="53.34" x2="33.02" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="C16" gate="G$1" pin="2"/>
+<wire x1="-68.58" y1="167.64" x2="-68.58" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="SUPPLY2" gate="G$1" pin="DGND"/>
 </segment>
 </net>
 <net name="MGND" class="0">
@@ -13454,25 +13477,13 @@ http://www.bobstarr.net</description>
 <junction x="-5.08" y="294.64"/>
 </segment>
 </net>
-<net name="PA4_GYROLOGIC" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PA4-SPI1_NSS/I2S1_WS/SPI3_NSS/USART2_CK"/>
-<wire x1="203.2" y1="320.04" x2="246.38" y2="320.04" width="0.1524" layer="91"/>
-<label x="246.38" y="320.04" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="SPLIT_GYRO_LOGIC" gate="G$1" pin="2"/>
-<wire x1="294.64" y1="165.1" x2="294.64" y2="167.64" width="0.1524" layer="91"/>
-<label x="294.64" y="167.64" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-</net>
 <net name="N$13" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="1"/>
 <wire x1="256.54" y1="304.8" x2="213.36" y2="304.8" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="304.8" x2="213.36" y2="297.18" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="PA13-JTMS-SWDIO/EVENTOUT"/>
-<wire x1="213.36" y1="297.18" x2="203.2" y2="297.18" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="297.18" x2="200.66" y2="297.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -13481,13 +13492,13 @@ http://www.bobstarr.net</description>
 <wire x1="256.54" y1="302.26" x2="215.9" y2="302.26" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="302.26" x2="215.9" y2="294.64" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="PA14-JTCK-SWCLK/EVENTOUT"/>
-<wire x1="215.9" y1="294.64" x2="203.2" y2="294.64" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="294.64" x2="200.66" y2="294.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PC6_TX_PIN" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PC6-TIM3_CH1/I2S2_MCK/USART6_TX"/>
-<wire x1="60.96" y1="256.54" x2="50.8" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="256.54" x2="50.8" y2="256.54" width="0.1524" layer="91"/>
 <label x="50.8" y="256.54" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
@@ -13504,27 +13515,15 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PC7-TIM3_CH2/SPI2_SCK/I2S3_MCK/USART6_RX/SDIO_D7"/>
-<wire x1="60.96" y1="254" x2="55.88" y2="254" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="254" x2="55.88" y2="254" width="0.1524" layer="91"/>
 <label x="55.88" y="254" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$16" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="VCAP1"/>
-<wire x1="203.2" y1="223.52" x2="210.82" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="223.52" x2="210.82" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="C26" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="PIN30_VSS" class="0">
-<segment>
-<pinref part="C26" gate="G$1" pin="2"/>
-<wire x1="218.44" y1="223.52" x2="223.52" y2="223.52" width="0.1524" layer="91"/>
-<label x="223.52" y="223.52" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="SPLIT_VSS_CAP" gate="G$1" pin="2"/>
-<wire x1="55.88" y1="215.9" x2="55.88" y2="210.82" width="0.1524" layer="91"/>
-<label x="55.88" y="210.82" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -13551,7 +13550,7 @@ http://www.bobstarr.net</description>
 <net name="PB3_ENCODER2_2" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB3-JTDO-SWO/TIME2_CH2/SPI1_SCK/SPI3_SCK/USART1_RX/I2C2_SDA"/>
-<wire x1="203.2" y1="276.86" x2="213.36" y2="276.86" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="276.86" x2="213.36" y2="276.86" width="0.1524" layer="91"/>
 <label x="213.36" y="276.86" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13563,7 +13562,7 @@ http://www.bobstarr.net</description>
 <net name="PA_7_REC_CIRCUIT_1" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA7-TIM1_CH1N/TIM3_CH2"/>
-<wire x1="203.2" y1="312.42" x2="213.36" y2="312.42" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="312.42" x2="213.36" y2="312.42" width="0.1524" layer="91"/>
 <label x="213.36" y="312.42" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13579,7 +13578,7 @@ http://www.bobstarr.net</description>
 <net name="PA_5_ENCODER2_1" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA5-TIM2_CH1/TIM2_ET/SPI1_SCK/I2S1_CK"/>
-<wire x1="203.2" y1="317.5" x2="208.28" y2="317.5" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="317.5" x2="208.28" y2="317.5" width="0.1524" layer="91"/>
 <label x="208.28" y="317.5" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13591,7 +13590,7 @@ http://www.bobstarr.net</description>
 <net name="PC8_REC_CIRCUIT_3" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PC8-TIM3_CH3/USART6_CK/SDIO_D0"/>
-<wire x1="60.96" y1="251.46" x2="55.88" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="251.46" x2="55.88" y2="251.46" width="0.1524" layer="91"/>
 <label x="58.42" y="251.46" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
@@ -13607,7 +13606,7 @@ http://www.bobstarr.net</description>
 <net name="PC9_REC_CIRCUIT_4" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PC9-MCO_2/TIM3)CH4/I2C3_SDA/SDIO_D1"/>
-<wire x1="60.96" y1="248.92" x2="55.88" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="248.92" x2="55.88" y2="248.92" width="0.1524" layer="91"/>
 <label x="58.42" y="248.92" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
@@ -13623,7 +13622,7 @@ http://www.bobstarr.net</description>
 <net name="RED_LED" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PC0-EVENTOUT"/>
-<wire x1="60.96" y1="271.78" x2="55.88" y2="271.78" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="271.78" x2="55.88" y2="271.78" width="0.1524" layer="91"/>
 <label x="55.88" y="271.78" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
@@ -13635,7 +13634,7 @@ http://www.bobstarr.net</description>
 <net name="BLUE_LED" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PC1-EVENTOUT"/>
-<wire x1="60.96" y1="269.24" x2="55.88" y2="269.24" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="269.24" x2="55.88" y2="269.24" width="0.1524" layer="91"/>
 <label x="55.88" y="269.24" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
@@ -13647,7 +13646,7 @@ http://www.bobstarr.net</description>
 <net name="GREEN_LED" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PC2-SPI2_MISO+EVENTOUT"/>
-<wire x1="60.96" y1="266.7" x2="55.88" y2="266.7" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="266.7" x2="55.88" y2="266.7" width="0.1524" layer="91"/>
 <label x="55.88" y="266.7" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
@@ -13712,7 +13711,7 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB15-RTC_50HZ/TIM1_CH3N/SPI2_MOSI/SDIO_CK"/>
-<wire x1="203.2" y1="246.38" x2="208.28" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="246.38" x2="208.28" y2="246.38" width="0.1524" layer="91"/>
 <label x="208.28" y="246.38" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
@@ -13728,7 +13727,7 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB14-TIM1_CH2N/SPI2_MISO/I2S2EXT_SD/SDIO_D6"/>
-<wire x1="203.2" y1="248.92" x2="208.28" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="248.92" x2="208.28" y2="248.92" width="0.1524" layer="91"/>
 <label x="208.28" y="248.92" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
@@ -13744,7 +13743,7 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB13-TIM1_CH1N/SPI2_SCK/I2S2_CL"/>
-<wire x1="203.2" y1="251.46" x2="208.28" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="251.46" x2="208.28" y2="251.46" width="0.1524" layer="91"/>
 <label x="208.28" y="251.46" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
@@ -13760,14 +13759,14 @@ http://www.bobstarr.net</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB12-TIM1_BKIN/I2C2_SMBA/SPI2_NSS/SPI4_NSS/SPI3_SCK"/>
-<wire x1="203.2" y1="254" x2="208.28" y2="254" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="254" x2="208.28" y2="254" width="0.1524" layer="91"/>
 <label x="208.28" y="254" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VOLTAGE_BATTERY_1" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="TIM2_CH3/TIM5_CH3/TIM9_CH1/I2S2_CKIN"/>
-<wire x1="203.2" y1="325.12" x2="213.36" y2="325.12" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="325.12" x2="213.36" y2="325.12" width="0.1524" layer="91"/>
 <label x="213.36" y="325.12" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13781,7 +13780,7 @@ http://www.bobstarr.net</description>
 <net name="VOLTAGE_BATTERY_2" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA3-TIM2_CH4/TIM5_CH4/TIM9_CH2/I2S2_MCK"/>
-<wire x1="203.2" y1="322.58" x2="213.36" y2="322.58" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="322.58" x2="213.36" y2="322.58" width="0.1524" layer="91"/>
 <label x="213.36" y="322.58" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13794,7 +13793,7 @@ http://www.bobstarr.net</description>
 <net name="HBRIDGE_EN1" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB4-JTRST/TIM3_CH1/SPI1_MISO/SPI3_MISO/I2S3EXT_SD/I2C3_SDA/DIO_D0"/>
-<wire x1="203.2" y1="274.32" x2="213.36" y2="274.32" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="274.32" x2="213.36" y2="274.32" width="0.1524" layer="91"/>
 <label x="213.36" y="274.32" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13806,7 +13805,7 @@ http://www.bobstarr.net</description>
 <net name="HBRIDGE_EN2" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PB5-TIM3_CH2/I2C1_SMBA/SPI1_MOSI/SDIO_D3"/>
-<wire x1="203.2" y1="271.78" x2="213.36" y2="271.78" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="271.78" x2="213.36" y2="271.78" width="0.1524" layer="91"/>
 <label x="213.36" y="271.78" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
@@ -13815,31 +13814,72 @@ http://www.bobstarr.net</description>
 <label x="208.28" y="33.02" size="1.778" layer="95" rot="MR0" xref="yes"/>
 </segment>
 </net>
-<net name="VDDA/VREF+" class="0">
-<segment>
-<pinref part="U$22" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="233.68" x2="-73.66" y2="233.68" width="0.1524" layer="91"/>
-<label x="-76.2" y="233.68" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<wire x1="60.96" y1="307.34" x2="53.34" y2="307.34" width="0.1524" layer="91"/>
-<label x="53.34" y="307.34" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="VSSA/VREF-" class="0">
-<segment>
-<pinref part="U$7" gate="G$1" pin="1"/>
-<wire x1="-106.68" y1="220.98" x2="-114.3" y2="220.98" width="0.1524" layer="91"/>
-<label x="-111.76" y="220.98" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<wire x1="60.96" y1="233.68" x2="48.26" y2="233.68" width="0.1524" layer="91"/>
-<label x="50.8" y="233.68" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="102,1,-20.32,264.16,GND,DGND,,,,"/>
+<approved hash="102,1,50.8,231.14,GND,DGND,,,,"/>
+<approved hash="102,1,45.72,228.6,GND,DGND,,,,"/>
+<approved hash="102,1,43.18,226.06,GND,DGND,,,,"/>
+<approved hash="102,1,40.64,223.52,GND,DGND,,,,"/>
+<approved hash="102,1,596.9,193.04,GND,DGND,,,,"/>
+<approved hash="102,1,492.76,190.5,GND,DGND,,,,"/>
+<approved hash="102,1,383.54,187.96,GND,DGND,,,,"/>
+<approved hash="102,1,274.32,190.5,GND,DGND,,,,"/>
+<approved hash="102,1,292.1,287.02,GND,DGND,,,,"/>
+<approved hash="102,1,322.58,134.62,GND,DGND,,,,"/>
+<approved hash="102,1,294.64,134.62,GND,DGND,,,,"/>
+<approved hash="102,1,360.68,137.16,GND,DGND,,,,"/>
+<approved hash="102,1,401.32,289.56,GND,DGND,,,,"/>
+<approved hash="102,1,403.86,284.48,GND,DGND,,,,"/>
+<approved hash="102,1,406.4,279.4,GND,DGND,,,,"/>
+<approved hash="102,1,408.94,274.32,GND,DGND,,,,"/>
+<approved hash="102,1,210.82,236.22,GND,DGND,,,,"/>
+<approved hash="102,1,-50.8,160.02,GND,DGND,,,,"/>
+<approved hash="102,1,-33.02,160.02,GND,DGND,,,,"/>
+<approved hash="102,1,-20.32,160.02,GND,DGND,,,,"/>
+<approved hash="102,1,-7.62,160.02,GND,DGND,,,,"/>
+<approved hash="102,1,5.08,160.02,GND,DGND,,,,"/>
+<approved hash="102,1,17.78,160.02,GND,DGND,,,,"/>
+<approved hash="201,1,17.78,160.02,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,5.08,160.02,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,-7.62,160.02,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,-20.32,160.02,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,-33.02,160.02,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,-50.8,160.02,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,210.82,236.22,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,408.94,274.32,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,406.4,279.4,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,403.86,284.48,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,401.32,289.56,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,360.68,137.16,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,294.64,134.62,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,322.58,134.62,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,292.1,287.02,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,274.32,190.5,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,383.54,187.96,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,492.76,190.5,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,596.9,193.04,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,40.64,223.52,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,43.18,226.06,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,45.72,228.6,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,50.8,231.14,GND,GND\, DGND,,,,"/>
+<approved hash="201,1,-20.32,264.16,GND,GND\, DGND,,,,"/>
+<approved hash="104,1,220.98,25.4,IC2,GND,MGND,,,"/>
+<approved hash="104,1,220.98,22.86,IC2,GND,MGND,,,"/>
+<approved hash="104,1,246.38,50.8,IC2,VSS,3.3V,,,"/>
+<approved hash="104,1,220.98,50.8,IC2,VS,BATTERY,,,"/>
+<approved hash="104,1,220.98,20.32,IC2,GND,MGND,,,"/>
+<approved hash="104,1,220.98,17.78,IC2,GND,MGND,,,"/>
+<approved hash="104,1,246.38,17.78,IC2,GND,MGND,,,"/>
+<approved hash="104,1,246.38,20.32,IC2,GND,MGND,,,"/>
+<approved hash="104,1,246.38,22.86,IC2,GND,MGND,,,"/>
+<approved hash="104,1,246.38,25.4,IC2,GND,MGND,,,"/>
+<approved hash="109,1,58.42,226.06,DGND,,,,,"/>
+<approved hash="109,1,58.42,223.52,DGND,,,,,"/>
+<approved hash="113,1,256.777,301.121,JP1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
