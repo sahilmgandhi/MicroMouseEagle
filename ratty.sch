@@ -12582,7 +12582,6 @@ High-power, low thermal resistance package.</description>
 <part name="U$5" library="TPS73633(SOT-23)" deviceset="TPS73633(SOT-23)" device=""/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
-<part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="10 uF"/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="10 nF"/>
 <part name="U$13" library="sfh4550 &amp; teft4300" deviceset="RECEIVER" device=""/>
 <part name="R12" library="resistor" deviceset="R-US_" device="R0603" value="1.8K"/>
@@ -12690,15 +12689,15 @@ High-power, low thermal resistance package.</description>
 <part name="C31" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="GND34" library="supply2" deviceset="DGND" device=""/>
 <part name="C33" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
-<part name="AGND2" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND10" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND11" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND12" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND1" library="supply1" deviceset="AGND" device=""/>
 <part name="SUPPLY1" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="DGND" device=""/>
 <part name="S3" library="SparkFun" deviceset="SWITCH-SPST" device="PTH"/>
+<part name="GND9" library="supply2" deviceset="DGND" device=""/>
+<part name="GND10" library="supply2" deviceset="DGND" device=""/>
+<part name="GND15" library="supply2" deviceset="DGND" device=""/>
+<part name="GND16" library="supply2" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12721,7 +12720,6 @@ High-power, low thermal resistance package.</description>
 <instance part="U$5" gate="G$1" x="210.82" y="99.06"/>
 <instance part="GND3" gate="1" x="177.8" y="99.06" rot="MR90"/>
 <instance part="C3" gate="G$1" x="187.96" y="104.14"/>
-<instance part="C4" gate="G$1" x="233.68" y="106.68" rot="R270"/>
 <instance part="C5" gate="G$1" x="233.68" y="83.82"/>
 <instance part="U$13" gate="G$1" x="596.9" y="144.78"/>
 <instance part="R12" gate="G$1" x="599.44" y="124.46" rot="R90"/>
@@ -12838,15 +12836,15 @@ High-power, low thermal resistance package.</description>
 <instance part="C31" gate="G$1" x="5.08" y="172.72"/>
 <instance part="GND34" gate="G$1" x="5.08" y="157.48"/>
 <instance part="C33" gate="G$1" x="-88.9" y="228.6"/>
-<instance part="AGND2" gate="VR1" x="193.04" y="139.7" rot="R270"/>
-<instance part="AGND10" gate="VR1" x="208.28" y="132.08"/>
-<instance part="AGND11" gate="VR1" x="271.78" y="149.86" rot="R90"/>
-<instance part="AGND12" gate="VR1" x="274.32" y="147.32" rot="R90"/>
 <instance part="AGND1" gate="VR1" x="30.48" y="60.96" rot="R270"/>
 <instance part="SUPPLY1" gate="G$1" x="30.48" y="53.34" rot="R270"/>
 <instance part="SUPPLY2" gate="G$1" x="-68.58" y="154.94"/>
 <instance part="SUPPLY3" gate="G$1" x="-88.9" y="154.94"/>
 <instance part="S3" gate="1" x="43.18" y="116.84"/>
+<instance part="GND9" gate="G$1" x="271.78" y="149.86" rot="R90"/>
+<instance part="GND10" gate="G$1" x="271.78" y="147.32" rot="R90"/>
+<instance part="GND15" gate="G$1" x="208.28" y="132.08"/>
+<instance part="GND16" gate="G$1" x="193.04" y="139.7" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -13010,6 +13008,11 @@ High-power, low thermal resistance package.</description>
 <wire x1="375.92" y1="-5.08" x2="375.92" y2="-15.24" width="0.1524" layer="91"/>
 <label x="375.92" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="VSS"/>
+<wire x1="246.38" y1="50.8" x2="256.54" y2="50.8" width="0.1524" layer="91"/>
+<label x="256.54" y="50.8" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="BATTERY_1" class="0">
 <segment>
@@ -13168,19 +13171,7 @@ High-power, low thermal resistance package.</description>
 <label x="429.26" y="-17.78" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="TO_C4_CAP" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="OUT"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="228.6" y1="106.68" x2="226.06" y2="106.68" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="3.3V" class="0">
-<segment>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="236.22" y1="106.68" x2="254" y2="106.68" width="0.1524" layer="91"/>
-<label x="254" y="106.68" size="1.778" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="10.16" y1="294.64" x2="10.16" y2="299.72" width="0.1524" layer="91"/>
@@ -13209,11 +13200,6 @@ High-power, low thermal resistance package.</description>
 <wire x1="487.68" y1="322.58" x2="502.92" y2="322.58" width="0.1524" layer="91"/>
 <wire x1="502.92" y1="322.58" x2="502.92" y2="347.98" width="0.1524" layer="91"/>
 <label x="502.92" y="347.98" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="G$1" pin="VSS"/>
-<wire x1="246.38" y1="50.8" x2="256.54" y2="50.8" width="0.1524" layer="91"/>
-<label x="256.54" y="50.8" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <label x="-93.98" y="238.76" size="1.778" layer="95" rot="R90" xref="yes"/>
@@ -13313,6 +13299,11 @@ High-power, low thermal resistance package.</description>
 <wire x1="157.48" y1="190.5" x2="175.26" y2="190.5" width="0.1524" layer="91"/>
 <label x="175.26" y="190.5" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="OUT"/>
+<wire x1="226.06" y1="106.68" x2="254" y2="106.68" width="0.1524" layer="91"/>
+<label x="254" y="106.68" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="TO_C5_CAP" class="0">
 <segment>
@@ -13383,29 +13374,6 @@ High-power, low thermal resistance package.</description>
 <junction x="-93.98" y="220.98"/>
 <pinref part="U$4" gate="G$1" pin="VSSA/VREF-"/>
 <wire x1="25.4" y1="233.68" x2="58.42" y2="233.68" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="RESV-G"/>
-<wire x1="218.44" y1="147.32" x2="198.12" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="147.32" x2="198.12" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="AGND2" gate="VR1" pin="AGND"/>
-<wire x1="198.12" y1="139.7" x2="195.58" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<pinref part="AGND10" gate="VR1" pin="AGND"/>
-<wire x1="218.44" y1="144.78" x2="208.28" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="144.78" x2="208.28" y2="134.62" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="INT"/>
-<pinref part="AGND11" gate="VR1" pin="AGND"/>
-<wire x1="246.38" y1="149.86" x2="269.24" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="AGND12" gate="VR1" pin="AGND"/>
-<pinref part="U1" gate="G$1" pin="AD0"/>
-<wire x1="271.78" y1="147.32" x2="246.38" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="A_SPLITTER" gate="G$1" pin="2"/>
@@ -13510,11 +13478,6 @@ High-power, low thermal resistance package.</description>
 <wire x1="505.46" y1="134.62" x2="492.76" y2="134.62" width="0.1524" layer="91"/>
 <junction x="505.46" y="134.62"/>
 <label x="492.76" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<wire x1="200.66" y1="314.96" x2="213.36" y2="314.96" width="0.1524" layer="91"/>
-<label x="213.36" y="314.96" size="1.778" layer="95" xref="yes"/>
-<pinref part="U$4" gate="G$1" pin="PA6-TIM1_BKIN/TIM3_CH1/SPI1_MISO/SDIO_CMD"/>
 </segment>
 </net>
 <net name="NRST_CIRCUIT_MCU" class="0">
@@ -13809,6 +13772,29 @@ High-power, low thermal resistance package.</description>
 <wire x1="-88.9" y1="167.64" x2="-88.9" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="SUPPLY3" gate="G$1" pin="DGND"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="INT"/>
+<wire x1="246.38" y1="149.86" x2="269.24" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="GND9" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="AD0"/>
+<pinref part="GND10" gate="G$1" pin="DGND"/>
+<wire x1="269.24" y1="147.32" x2="246.38" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="218.44" y1="144.78" x2="208.28" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="144.78" x2="208.28" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="GND15" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="RESV-G"/>
+<wire x1="218.44" y1="147.32" x2="198.12" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="147.32" x2="198.12" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="139.7" x2="195.58" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="G$1" pin="DGND"/>
+</segment>
 </net>
 <net name="MGND" class="0">
 <segment>
@@ -13938,11 +13924,6 @@ High-power, low thermal resistance package.</description>
 </net>
 <net name="PA_7_REC_CIRCUIT_1" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="PA7-TIM1_CH1N/TIM3_CH2"/>
-<wire x1="200.66" y1="312.42" x2="213.36" y2="312.42" width="0.1524" layer="91"/>
-<label x="213.36" y="312.42" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U$6" gate="G$1" pin="E"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="457.2" y1="139.7" x2="457.2" y2="134.62" width="0.1524" layer="91"/>
@@ -13958,26 +13939,8 @@ High-power, low thermal resistance package.</description>
 <wire x1="58.42" y1="251.46" x2="55.88" y2="251.46" width="0.1524" layer="91"/>
 <label x="58.42" y="251.46" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<pinref part="U$11" gate="G$1" pin="E"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="553.72" y1="139.7" x2="553.72" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="553.72" y1="134.62" x2="553.72" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="553.72" y1="134.62" x2="541.02" y2="134.62" width="0.1524" layer="91"/>
-<junction x="553.72" y="134.62"/>
-<label x="541.02" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
 </net>
 <net name="PC9_REC_CIRCUIT_4" class="0">
-<segment>
-<pinref part="U$13" gate="G$1" pin="E"/>
-<pinref part="R12" gate="G$1" pin="2"/>
-<wire x1="599.44" y1="139.7" x2="599.44" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="599.44" y1="134.62" x2="599.44" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="599.44" y1="134.62" x2="586.74" y2="134.62" width="0.1524" layer="91"/>
-<junction x="599.44" y="134.62"/>
-<label x="586.74" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PC12-SPI3_MOSI/I2S3_SD/SDIO_CK"/>
 <wire x1="58.42" y1="241.3" x2="45.72" y2="241.3" width="0.1524" layer="91"/>
@@ -14263,6 +14226,38 @@ High-power, low thermal resistance package.</description>
 <label x="350.52" y="-15.24" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
+<net name="REC_CIRCUIT_3" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PC4"/>
+<wire x1="58.42" y1="261.62" x2="50.8" y2="261.62" width="0.1524" layer="91"/>
+<label x="50.8" y="261.62" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="E"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="553.72" y1="139.7" x2="553.72" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="553.72" y1="134.62" x2="553.72" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="553.72" y1="134.62" x2="541.02" y2="134.62" width="0.1524" layer="91"/>
+<junction x="553.72" y="134.62"/>
+<label x="541.02" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="REC_CIRCUIT_4" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PC5"/>
+<wire x1="58.42" y1="259.08" x2="50.8" y2="259.08" width="0.1524" layer="91"/>
+<label x="50.8" y="259.08" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$13" gate="G$1" pin="E"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="599.44" y1="139.7" x2="599.44" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="599.44" y1="134.62" x2="599.44" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="599.44" y1="134.62" x2="586.74" y2="134.62" width="0.1524" layer="91"/>
+<junction x="599.44" y="134.62"/>
+<label x="586.74" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -14271,7 +14266,6 @@ High-power, low thermal resistance package.</description>
 <approved hash="201,1,210.82,236.22,GND,GND\, DGND,,,,"/>
 <approved hash="104,1,220.98,25.4,IC2,GND,MGND,,,"/>
 <approved hash="104,1,220.98,22.86,IC2,GND,MGND,,,"/>
-<approved hash="104,1,246.38,50.8,IC2,VSS,3.3V,,,"/>
 <approved hash="104,1,220.98,50.8,IC2,VS,BATTERY,,,"/>
 <approved hash="104,1,220.98,20.32,IC2,GND,MGND,,,"/>
 <approved hash="104,1,220.98,17.78,IC2,GND,MGND,,,"/>
