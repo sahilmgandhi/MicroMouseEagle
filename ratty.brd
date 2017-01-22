@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.0.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -4095,16 +4095,16 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C25" library="rcl" package="C0603" value="0.1uF" x="52.832" y="26.3652" rot="R270"/>
 <element name="C28" library="rcl" package="C0603" value="0.1uF" x="61.6204" y="23.0886" rot="R270"/>
 <element name="C29" library="rcl" package="C0603" value="0.1uF" x="46.9646" y="11.6078" rot="R90"/>
-<element name="R26" library="rcl" package="R0603" value="20K" x="41.0464" y="22.6568"/>
+<element name="R26" library="rcl" package="R0603" value="40K" x="41.0464" y="22.6568"/>
 <element name="R27" library="rcl" package="R0603" value="20K" x="41.3766" y="19.939" rot="R180"/>
-<element name="R28" library="rcl" package="R0603" value="10K" x="44.8818" y="19.939"/>
+<element name="R28" library="rcl" package="R0603" value="20K" x="44.8818" y="19.939"/>
 <element name="R29" library="rcl" package="R0603" value="10k" x="40.6146" y="12.8524" rot="R90"/>
 <element name="C31" library="rcl" package="C0603" value="4.7uF" x="40.9702" y="47.2948" rot="R332.9"/>
 <element name="C33" library="rcl" package="C0603" value="1uF" x="37.846" y="30.607" rot="R149.8"/>
 <element name="S3" library="SparkFun" package="SWITCH-SPDT" value="" x="4.5212" y="51.7906"/>
 <element name="R30" library="rcl" package="R0603" value="10k" x="-298.704" y="-108.9152"/>
 <element name="R31" library="rcl" package="R0603" value="10k" x="-298.704" y="-113.0808"/>
-<element name="R9" library="rcl" package="R0603" value="" x="-298.704" y="-117.8306"/>
+<element name="680R" library="rcl" package="R0603" value="" x="-298.704" y="-117.8306"/>
 </elements>
 <signals>
 <signal name="BATTERY_2">
@@ -4224,23 +4224,21 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="76.466534375" y1="42.545" x2="74.93" y2="41.008465625" width="1.524" layer="16"/>
 <wire x1="76.466534375" y1="42.545" x2="73.4314" y2="42.545" width="1.524" layer="16"/>
 <contactref element="IC2" pad="20"/>
-<contactref element="R9" pad="2"/>
-<wire x1="3.3274" y1="8.73" x2="-297.854" y2="-117.8306" width="0" layer="19" extent="1-1"/>
-<wire x1="4.5974" y1="8.73" x2="3.3274" y2="8.73" width="0" layer="19" extent="1-1"/>
-<wire x1="5.3632" y1="6.8682" x2="4.5974" y2="8.73" width="0" layer="19" extent="1-1"/>
-<wire x1="5.3632" y1="4.9682" x2="5.3632" y2="6.8682" width="0" layer="19" extent="1-1"/>
-<wire x1="8.3956" y1="19.1262" x2="4.5974" y2="8.73" width="0" layer="19" extent="1-1"/>
-<wire x1="8.3702" y1="21.3106" x2="8.3956" y2="19.1262" width="0" layer="19" extent="1-1"/>
-<wire x1="8.3702" y1="23.8506" x2="8.3702" y2="21.3106" width="0" layer="19" extent="1-1"/>
-<wire x1="8.3702" y1="26.8478" x2="8.3702" y2="23.8506" width="0" layer="19" extent="1-1"/>
+<wire x1="76.466534375" y1="42.545" x2="76.198784375" y2="42.27725" width="0" layer="19" extent="16-16"/>
+<wire x1="14.7456" y1="59.944" x2="37.8024" y2="57.6114" width="0" layer="19" extent="1-1"/>
+<wire x1="5.6134" y1="37.2754" x2="14.7456" y2="59.944" width="0" layer="19" extent="1-1"/>
+<wire x1="8.3702" y1="26.8478" x2="5.5744" y2="37.2364" width="0" layer="19" extent="1-1"/>
+<wire x1="8.3702" y1="23.8506" x2="8.3702" y2="26.8478" width="0" layer="19" extent="1-1"/>
+<wire x1="8.3702" y1="21.3106" x2="8.3702" y2="23.8506" width="0" layer="19" extent="1-1"/>
+<wire x1="8.3956" y1="19.1262" x2="8.3702" y2="21.3106" width="0" layer="19" extent="1-1"/>
 <wire x1="4.3044" y1="20.4724" x2="8.3702" y2="21.3106" width="0" layer="19" extent="1-1"/>
 <wire x1="4.3044" y1="22.5298" x2="4.3044" y2="20.4724" width="0" layer="19" extent="1-1"/>
 <wire x1="14.1824" y1="16.8614" x2="8.3956" y2="19.1262" width="0" layer="19" extent="1-1"/>
-<wire x1="5.5744" y1="37.2364" x2="8.3702" y2="26.8478" width="0" layer="19" extent="1-1"/>
+<wire x1="4.5974" y1="8.73" x2="8.3956" y2="19.1262" width="0" layer="19" extent="1-1"/>
+<wire x1="3.3274" y1="8.73" x2="4.5974" y2="8.73" width="0" layer="19" extent="1-1"/>
+<wire x1="5.3632" y1="6.8682" x2="4.5974" y2="8.73" width="0" layer="19" extent="1-1"/>
+<wire x1="5.3632" y1="4.9682" x2="5.3632" y2="6.8682" width="0" layer="19" extent="1-1"/>
 <wire x1="18.59140625" y1="32.640984375" x2="8.3702" y2="26.8478" width="0" layer="19" extent="1-1"/>
-<wire x1="14.7456" y1="59.944" x2="5.6134" y2="37.2754" width="0" layer="19" extent="1-1"/>
-<wire x1="37.8024" y1="57.6114" x2="14.7456" y2="59.944" width="0" layer="19" extent="1-1"/>
-<wire x1="76.198784375" y1="42.27725" x2="76.466534375" y2="42.545" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="BATTERY_1">
 <contactref element="U$1" pad="+"/>
@@ -4558,6 +4556,8 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U$5" pad="OUT"/>
 <contactref element="R30" pad="2"/>
 <contactref element="R31" pad="2"/>
+<contactref element="680R" pad="2"/>
+<wire x1="-297.854" y1="-113.0808" x2="-297.854" y2="-117.8306" width="0" layer="19" extent="1-1"/>
 <wire x1="-297.854" y1="-108.9152" x2="-297.854" y2="-113.0808" width="0" layer="19" extent="1-1"/>
 <wire x1="2.6632" y1="4.9682" x2="-297.854" y2="-108.9152" width="0" layer="19" extent="1-1"/>
 <wire x1="33.6296" y1="28.6766" x2="2.6632" y2="4.9682" width="0" layer="19" extent="1-16"/>
@@ -6033,7 +6033,7 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="N$1">
 <contactref element="U$17" pad="A"/>
-<contactref element="R9" pad="1"/>
+<contactref element="680R" pad="1"/>
 <wire x1="58.3834" y1="15.0354" x2="-299.554" y2="-117.8306" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.0.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -12687,9 +12687,9 @@ High-power, low thermal resistance package.</description>
 <part name="GND23" library="supply2" deviceset="DGND" device=""/>
 <part name="GND25" library="supply2" deviceset="DGND" device=""/>
 <part name="GND26" library="supply2" deviceset="DGND" device=""/>
-<part name="R26" library="rcl" deviceset="R-US_" device="R0603" value="20K"/>
+<part name="R26" library="rcl" deviceset="R-US_" device="R0603" value="40K"/>
 <part name="R27" library="rcl" deviceset="R-US_" device="R0603" value="20K"/>
-<part name="R28" library="rcl" deviceset="R-US_" device="R0603" value="10K"/>
+<part name="R28" library="rcl" deviceset="R-US_" device="R0603" value="20K"/>
 <part name="AGND7" library="supply1" deviceset="AGND" device=""/>
 <part name="R29" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="AGND8" library="supply1" deviceset="AGND" device=""/>
@@ -12711,7 +12711,7 @@ High-power, low thermal resistance package.</description>
 <part name="GND16" library="supply2" deviceset="DGND" device=""/>
 <part name="R30" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R31" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="R9" library="rcl" deviceset="R-US_" device="R0603"/>
+<part name="680R" library="rcl" deviceset="R-US_" device="R0603"/>
 </parts>
 <sheets>
 <sheet>
@@ -12849,7 +12849,7 @@ High-power, low thermal resistance package.</description>
 <instance part="GND16" gate="G$1" x="193.04" y="139.7" rot="R270"/>
 <instance part="R30" gate="G$1" x="251.46" y="175.26" rot="R90"/>
 <instance part="R31" gate="G$1" x="261.62" y="175.26" rot="R90"/>
-<instance part="R9" gate="G$1" x="165.1" y="198.12"/>
+<instance part="680R" gate="G$1" x="165.1" y="198.12"/>
 </instances>
 <busses>
 </busses>
@@ -13017,12 +13017,6 @@ High-power, low thermal resistance package.</description>
 <pinref part="IC2" gate="G$1" pin="VSS"/>
 <wire x1="246.38" y1="50.8" x2="256.54" y2="50.8" width="0.1524" layer="91"/>
 <label x="256.54" y="50.8" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="170.18" y1="198.12" x2="170.18" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="190.5" x2="177.8" y2="190.5" width="0.1524" layer="91"/>
-<label x="177.8" y="190.5" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="BATTERY_1" class="0">
@@ -13317,6 +13311,12 @@ High-power, low thermal resistance package.</description>
 <wire x1="261.62" y1="180.34" x2="261.62" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="261.62" y1="182.88" x2="251.46" y2="182.88" width="0.1524" layer="91"/>
 <label x="256.54" y="182.88" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="680R" gate="G$1" pin="2"/>
+<wire x1="170.18" y1="198.12" x2="170.18" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="190.5" x2="177.8" y2="190.5" width="0.1524" layer="91"/>
+<label x="177.8" y="190.5" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="TO_C5_CAP" class="0">
@@ -14259,7 +14259,7 @@ High-power, low thermal resistance package.</description>
 <segment>
 <pinref part="U$17" gate="G$1" pin="A"/>
 <wire x1="157.48" y1="190.5" x2="160.02" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="1"/>
+<pinref part="680R" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="190.5" x2="160.02" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 </net>
