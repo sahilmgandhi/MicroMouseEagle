@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="8.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -4095,16 +4095,16 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C25" library="rcl" package="C0603" value="0.1uF" x="52.832" y="26.3652" rot="R270"/>
 <element name="C28" library="rcl" package="C0603" value="0.1uF" x="61.6204" y="23.0886" rot="R270"/>
 <element name="C29" library="rcl" package="C0603" value="0.1uF" x="46.9646" y="11.6078" rot="R90"/>
-<element name="R26" library="rcl" package="R0603" value="40K" x="41.0464" y="22.6568"/>
-<element name="R27" library="rcl" package="R0603" value="20K" x="41.3766" y="19.939" rot="R180"/>
+<element name="R26" library="rcl" package="R0603" value="43K" x="41.0464" y="22.6568"/>
+<element name="R27" library="rcl" package="R0603" value="43K" x="41.3766" y="19.939" rot="R180"/>
 <element name="R28" library="rcl" package="R0603" value="20K" x="44.8818" y="19.939"/>
-<element name="R29" library="rcl" package="R0603" value="10k" x="40.6146" y="12.8524" rot="R90"/>
+<element name="R29" library="rcl" package="R0603" value="20K" x="40.6146" y="12.8524" rot="R90"/>
 <element name="C31" library="rcl" package="C0603" value="4.7uF" x="40.9702" y="47.2948" rot="R332.9"/>
 <element name="C33" library="rcl" package="C0603" value="1uF" x="37.846" y="30.607" rot="R149.8"/>
 <element name="S3" library="SparkFun" package="SWITCH-SPDT" value="" x="4.5212" y="51.7906"/>
 <element name="R30" library="rcl" package="R0603" value="10k" x="-298.704" y="-108.9152"/>
 <element name="R31" library="rcl" package="R0603" value="10k" x="-298.704" y="-113.0808"/>
-<element name="680R" library="rcl" package="R0603" value="" x="-298.704" y="-117.8306"/>
+<element name="RESISTOR" library="rcl" package="R0603" value="680" x="-298.704" y="-117.8306"/>
 </elements>
 <signals>
 <signal name="BATTERY_2">
@@ -4556,7 +4556,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U$5" pad="OUT"/>
 <contactref element="R30" pad="2"/>
 <contactref element="R31" pad="2"/>
-<contactref element="680R" pad="2"/>
+<contactref element="RESISTOR" pad="2"/>
 <wire x1="-297.854" y1="-113.0808" x2="-297.854" y2="-117.8306" width="0" layer="19" extent="1-1"/>
 <wire x1="-297.854" y1="-108.9152" x2="-297.854" y2="-113.0808" width="0" layer="19" extent="1-1"/>
 <wire x1="2.6632" y1="4.9682" x2="-297.854" y2="-108.9152" width="0" layer="19" extent="1-1"/>
@@ -6033,7 +6033,7 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="N$1">
 <contactref element="U$17" pad="A"/>
-<contactref element="680R" pad="1"/>
+<contactref element="RESISTOR" pad="1"/>
 <wire x1="58.3834" y1="15.0354" x2="-299.554" y2="-117.8306" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
