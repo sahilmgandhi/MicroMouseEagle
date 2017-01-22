@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="8.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9,6 +9,20 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -12698,6 +12712,8 @@ High-power, low thermal resistance package.</description>
 <part name="GND10" library="supply2" deviceset="DGND" device=""/>
 <part name="GND15" library="supply2" deviceset="DGND" device=""/>
 <part name="GND16" library="supply2" deviceset="DGND" device=""/>
+<part name="R30" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
+<part name="R31" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -12845,6 +12861,8 @@ High-power, low thermal resistance package.</description>
 <instance part="GND10" gate="G$1" x="271.78" y="147.32" rot="R90"/>
 <instance part="GND15" gate="G$1" x="208.28" y="132.08"/>
 <instance part="GND16" gate="G$1" x="193.04" y="139.7" rot="R270"/>
+<instance part="R30" gate="G$1" x="251.46" y="175.26" rot="R90"/>
+<instance part="R31" gate="G$1" x="261.62" y="175.26" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -13303,6 +13321,14 @@ High-power, low thermal resistance package.</description>
 <pinref part="U$5" gate="G$1" pin="OUT"/>
 <wire x1="226.06" y1="106.68" x2="254" y2="106.68" width="0.1524" layer="91"/>
 <label x="254" y="106.68" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R30" gate="G$1" pin="2"/>
+<wire x1="251.46" y1="180.34" x2="251.46" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="R31" gate="G$1" pin="2"/>
+<wire x1="261.62" y1="180.34" x2="261.62" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="182.88" x2="251.46" y2="182.88" width="0.1524" layer="91"/>
+<label x="256.54" y="182.88" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="TO_C5_CAP" class="0">
@@ -14150,8 +14176,12 @@ High-power, low thermal resistance package.</description>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="SCL"/>
-<wire x1="246.38" y1="157.48" x2="251.46" y2="157.48" width="0.1524" layer="91"/>
-<label x="251.46" y="157.48" size="1.778" layer="95" xref="yes"/>
+<wire x1="246.38" y1="157.48" x2="261.62" y2="157.48" width="0.1524" layer="91"/>
+<label x="269.24" y="157.48" size="1.778" layer="95" xref="yes"/>
+<wire x1="261.62" y1="157.48" x2="269.24" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="157.48" x2="261.62" y2="170.18" width="0.1524" layer="91"/>
+<junction x="261.62" y="157.48"/>
+<pinref part="R31" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="GYROCLK" class="0">
@@ -14175,7 +14205,11 @@ High-power, low thermal resistance package.</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="SDA"/>
 <wire x1="246.38" y1="160.02" x2="251.46" y2="160.02" width="0.1524" layer="91"/>
-<label x="251.46" y="160.02" size="1.778" layer="95" xref="yes"/>
+<label x="266.7" y="160.02" size="1.778" layer="95" xref="yes"/>
+<wire x1="251.46" y1="160.02" x2="266.7" y2="160.02" width="0.1524" layer="91"/>
+<junction x="251.46" y="160.02"/>
+<wire x1="251.46" y1="160.02" x2="251.46" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="R30" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="ENCODER2_1" class="0">
