@@ -12612,7 +12612,7 @@ High-power, low thermal resistance package.</description>
 <part name="C6" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="U$16" library="sfh4550 &amp; teft4300" deviceset="EMITTER" device=""/>
-<part name="R7" library="rcl" deviceset="R-US_" device="R1206" value="43"/>
+<part name="R7" library="rcl" deviceset="R-US_" device="R1206" value="43Ω"/>
 <part name="R10" library="resistor" deviceset="R-US_" device="R0603" value="47K"/>
 <part name="Q2" library="transistors" deviceset="MOSFET-NCHANNEL" device="BSS123LT1G"/>
 <part name="C8" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
@@ -12666,12 +12666,12 @@ High-power, low thermal resistance package.</description>
 <part name="GND12" library="supply2" deviceset="DGND" device=""/>
 <part name="GND13" library="supply2" deviceset="DGND" device=""/>
 <part name="GND14" library="supply2" deviceset="DGND" device=""/>
-<part name="R8" library="rcl" deviceset="R-US_" device="R0603" value="100"/>
+<part name="R8" library="rcl" deviceset="R-US_" device="R0603" value="100Ω"/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X5" device="" value="ConnectorPins"/>
 <part name="C26" library="rcl" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="U$17" library="LEDs" deviceset="LED-TRICOLOR" device=""/>
 <part name="S2" library="switch-dil" deviceset="219-04*" device=""/>
-<part name="R20" library="resistor" deviceset="R-US_" device="R0603" value="100"/>
+<part name="R20" library="resistor" deviceset="R-US_" device="R0603" value="100Ω"/>
 <part name="R21" library="resistor" deviceset="R-US_" device="R0603" value="10K"/>
 <part name="C27" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="GND24" library="supply2" deviceset="DGND" device=""/>
