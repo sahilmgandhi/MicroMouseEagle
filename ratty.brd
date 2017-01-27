@@ -4037,7 +4037,7 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="U$11" library="sfh4550 &amp; teft4300" package="RECEIVER" value="RECEIVER" x="78.5368" y="25.9842" smashed="yes" rot="R240"/>
 <element name="R4" library="resistor" package="R0603" value="1.8K" x="64.5922" y="55.9054" smashed="yes" rot="R180">
-<attribute name="NAME" x="65.2272" y="55.2704" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="69.85" y="78.6638" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="65.2272" y="57.8104" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="U$15" library="sfh4550 &amp; teft4300" package="EMITTER" value="EMITTER" x="77.2668" y="33.2486" smashed="yes" rot="R240"/>
@@ -4222,7 +4222,7 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="R20" library="resistor" package="R0603" value="100Ω" x="48.8188" y="65.1764" smashed="yes" rot="R90">
 <attribute name="NAME" x="45.72" y="79.1972" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="51.5874" y="64.2874" size="1.27" layer="27" rot="R90"/>
+<attribute name="VALUE" x="51.562" y="63.627" size="1.016" layer="27" rot="R90"/>
 </element>
 <element name="R21" library="resistor" package="R0603" value="10K" x="46.7106" y="71.0184" smashed="yes">
 <attribute name="NAME" x="46.4058" y="77.6986" size="1.27" layer="25"/>
@@ -4302,7 +4302,7 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="R31" library="rcl" package="R0603" value="10k" x="59.3852" y="26.8986" smashed="yes">
 <attribute name="NAME" x="58.7502" y="27.5336" size="1.27" layer="25"/>
-<attribute name="VALUE" x="58.7502" y="24.9936" size="1.27" layer="27"/>
+<attribute name="VALUE" x="57.4548" y="24.5364" size="1.27" layer="27"/>
 </element>
 <element name="RESISTOR" library="rcl" package="R0603" value="680" x="57.1246" y="12.6746" smashed="yes" rot="R180">
 <attribute name="NAME" x="57.7596" y="12.0396" size="1.27" layer="25" rot="R180"/>
@@ -6473,12 +6473,12 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="55.4736" y1="35.179" x2="58.3692" y2="35.179" width="0.3048" layer="1"/>
 <via x="58.3692" y="35.179" extent="1-16" drill="0.6096"/>
 <wire x1="58.3692" y1="35.179" x2="59.5884" y2="33.9598" width="0.3048" layer="16"/>
-<via x="61.4172" y="27.5336" extent="1-16" drill="0.6096"/>
-<wire x1="61.4172" y1="27.5336" x2="62.103" y2="26.8478" width="0.3048" layer="1"/>
+<via x="61.4172" y="27.432" extent="1-16" drill="0.4064"/>
+<wire x1="61.4172" y1="27.432" x2="62.103" y2="26.8478" width="0.3048" layer="1"/>
 <wire x1="62.103" y1="26.8478" x2="62.103" y2="25.5524" width="0.3048" layer="1"/>
 <wire x1="62.103" y1="25.5524" x2="62.1284" y2="25.527" width="0.3048" layer="1"/>
 <wire x1="62.1284" y1="25.527" x2="62.1284" y2="25.5016" width="0.3048" layer="1"/>
-<via x="62.1284" y="25.5016" extent="1-16" drill="0.6096"/>
+<via x="62.1284" y="25.5016" extent="1-16" drill="0.4064"/>
 <wire x1="62.1284" y1="25.5016" x2="64.3636" y2="23.2664" width="0.3048" layer="16"/>
 <wire x1="64.9732" y1="20.7264" x2="73.9902" y2="20.7264" width="0.3048" layer="16"/>
 <wire x1="73.9902" y1="20.7264" x2="76.2254" y2="22.9616" width="0.3048" layer="16"/>
@@ -6490,7 +6490,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="59.5884" y1="33.9598" x2="59.5884" y2="28.2448" width="0.3048" layer="16"/>
 <wire x1="59.5884" y1="28.2448" x2="60.3758" y2="27.4574" width="0.3048" layer="16"/>
 <wire x1="60.3758" y1="27.4574" x2="61.341" y2="27.4574" width="0.3048" layer="16"/>
-<wire x1="61.341" y1="27.4574" x2="61.4172" y2="27.5336" width="0.3048" layer="16"/>
+<wire x1="61.341" y1="27.4574" x2="61.4172" y2="27.432" width="0.3048" layer="16"/>
 </signal>
 <signal name="PC5_REC_CIRCUIT_4">
 <contactref element="U$4" pad="25"/>
