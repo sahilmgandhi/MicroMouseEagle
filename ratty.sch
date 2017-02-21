@@ -13668,15 +13668,15 @@ High-power, low thermal resistance package.</description>
 </segment>
 <segment>
 <pinref part="GND5" gate="G$1" pin="DGND"/>
-<pinref part="RESETBUTTON" gate="G$1" pin="3"/>
-<wire x1="-20.32" y1="276.86" x2="-20.32" y2="279.4" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="264.16" x2="-20.32" y2="266.7" width="0.1524" layer="91"/>
-<junction x="-20.32" y="276.86"/>
 <pinref part="C24" gate="G$1" pin="1"/>
-<wire x1="-20.32" y1="266.7" x2="-20.32" y2="276.86" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="266.7" x2="-20.32" y2="274.32" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="276.86" x2="-5.08" y2="266.7" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="266.7" x2="-20.32" y2="266.7" width="0.1524" layer="91"/>
 <junction x="-20.32" y="266.7"/>
+<pinref part="RESETBUTTON" gate="G$1" pin="4"/>
+<wire x1="-22.86" y1="276.86" x2="-22.86" y2="274.32" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="274.32" x2="-20.32" y2="274.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="3"/>
